@@ -1,0 +1,17 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.ALL;
+USE ieee.numeric_std.ALL;
+
+ENTITY UnidadeControle IS
+    GENERIC (
+        DATA_WIDTH : NATURAL := 8; -- dado
+        ADDR_WIDTH : NATURAL := 8  -- endereço 
+    );
+    PORT (
+        -- Input ports
+        clk    : IN std_logic;
+        opCode : IN std_logic_vector(2 DOWNTO 0); -- opcode tem três bits
+        -- Output ports
+        palavraControle : OUT std_logic_vector(9 DOWNTO 0)
+    );
+END ENTITY;
