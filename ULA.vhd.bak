@@ -44,6 +44,6 @@ architecture comportamento of ULA is
           op_or when     (seletor = "111") else
           entradaA;      -- outra opcao: saida = entradaA
 
---      flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
+      flagZero <= '1' when unsigned(saida) = unsigned(zero) else '0';
 
 end architecture;

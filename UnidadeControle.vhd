@@ -18,7 +18,7 @@ ENTITY UnidadeControle IS
 END ENTITY;
 
 ARCHITECTURE main OF unidadeControle IS
-    ALIAS jmp            : std_logic IS palavraControle(9);
+    ALIAS jump            : std_logic IS palavraControle(9);
 	 ALIAS jmpCompare     : std_logic IS palavraControle(8);
 	 ALIAS sel_mux_ula    : std_logic IS palavraControle(7);
     ALIAS sel_muxImed    : std_logic IS palavraControle(6);
@@ -46,10 +46,10 @@ ARCHITECTURE main OF unidadeControle IS
     ALIAS je		: std_logic IS instrucao(4);
 	 ALIAS jmp     : std_logic IS instrucao(5);
     ALIAS store   : std_logic IS instrucao(6);
-    ALIAS And_    : std_logic IS instrucao(7);
-    ALIAS or_     : std_logic IS instrucao(8);
+    ALIAS opAnd    : std_logic IS instrucao(7);
+    ALIAS opOr   : std_logic IS instrucao(8);
 	 
-	 --           jmp   jmpCompare  sel_mux_ula  sel_muxImed  habEscritaReg   operacao  habLeituraMEM  habEscritaMEM
+	 --           jump   jmpCompare  sel_mux_ula  sel_muxImed  habEscritaReg   operacao  habLeituraMEM  habEscritaMEM
 	 -- load			0	       0        0	  				 1              0           0000        0                 0
 	 -- mov			0	       0        0	  				 1              0           0000        0                 0
 	 -- add			0	       0        0	  				 1              0           0000        0                 0
@@ -58,7 +58,7 @@ ARCHITECTURE main OF unidadeControle IS
 	 -- jmp        0         0        0              0              0           0000        0                 0
 	 -- store      0         0        0              1              0           0000        1                 0
 	 -- And_       0         0        0              0              0           0000        0                 1
-	 -- or_			0	       0        0	  				 1              1           0000        0                 0
+	 -- opOr			0	       0        0	  				 1              1           0000        0                 0
 	 
 BEGIN
 	WITH opCode SELECT
@@ -74,36 +74,37 @@ BEGIN
 		  "100000000" WHEN opcodeOR,
         "000000000" WHEN OTHERS;
 		  
---	WITH opcode SELECT		  		  
---		  operacao <= 
---		  "001" WHEN opcodeLOAD,
---		  
---        "001" WHEN opcodeMOV,
---		  
---        "000" WHEN opcodeADD,
---        "001" WHEN opcodeSub,
+	WITH opcode SELECT		  		  
+		  operacao <= 
+--		  "011" WHEN opcodeLOAD,
+		  
+        "001" WHEN opcodeMOV,
+		  
+        "000" WHEN opcodeADD,
+        "001" WHEN opcodeSub,
+		  
 --        "001" WHEN opcodeJE,
 --        "001" WHEN opcodeJMP,
---		  
---        "011" WHEN opcodeSTORE,
---		  
---        "110" WHEN opcodeAND,
---        "111" WHEN opcodeOR,
---        "000" WHEN OTHERS;
+		  
+        "010" WHEN opcodeSTORE,
+		  
+        "110" WHEN opcodeAND,
+        "111" WHEN opcodeOR,
+        "000" WHEN OTHERS;
 		  
 
 
-    jmp <= jmp OR (je AND flagZero);
+    jump <= jmp;
 
-    jmpCompare <= (je AND flagZero);
+    jmpCompare <= je; 
 
 --    sel_mux_ula <= 
 	 
-	 sel_muxImed <= add OR sub OR mov OR or_ OR and_;
+	 sel_muxImed <= add OR sub OR mov OR opOr OR opAnd;
 	 
-	 habEscritaReg <= add OR sub OR or_ OR and_ OR mov OR load ;
+	 habEscritaReg <= add OR sub OR opOr OR opAnd OR mov OR load ;
 	 
-	 habLeituraMEM <= add OR sub OR mov OR OR_ OR AND_;
+	 habLeituraMEM <= add OR sub OR mov OR opOr OR opAnd;
 
     habEscritaMEM <= mov;
 

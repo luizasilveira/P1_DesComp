@@ -9,8 +9,8 @@ entity memoriaROM is
           addrWidth: natural := 3
     );
    port (
-          Endereco : in std_logic_vector (7 DOWNTO 0);
-          Dado : out std_logic_vector (7 DOWNTO 0)
+          Endereco : in std_logic_vector (addrWidth-1 DOWNTO 0);
+          Dado : out std_logic_vector (dataWidth-1 DOWNTO 0)
     );
 end entity;
 
