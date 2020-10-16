@@ -29,25 +29,18 @@ ARCHITECTURE main OF unidadeControle IS
 	 
 	 SIGNAL instrucao     : std_logic_vector(8 DOWNTO 0);
 	 
-	 CONSTANT opcodeLOAD  : std_logic_vector(3 DOWNTO 0) := "0000";
+
     CONSTANT opcodeMOV   : std_logic_vector(3 DOWNTO 0) := "0001";
     CONSTANT opcodeADD   : std_logic_vector(3 DOWNTO 0) := "0010";
-    CONSTANT opcodeSub   : std_logic_vector(3 DOWNTO 0) := "0011";
+    CONSTANT opcodeSUB   : std_logic_vector(3 DOWNTO 0) := "0011";
     CONSTANT opcodeJE    : std_logic_vector(3 DOWNTO 0) := "0100";	 
     CONSTANT opcodeJMP   : std_logic_vector(3 DOWNTO 0) := "0101";
     CONSTANT opcodeSTORE : std_logic_vector(3 DOWNTO 0) := "0110"; 
-    CONSTANT opcodeAND   : std_logic_vector(3 DOWNTO 0) := "0111";
-    CONSTANT opcodeOR    : std_logic_vector(3 DOWNTO 0) := "1000";
-	 
-	 ALIAS load    : std_logic IS instrucao(0);
-    ALIAS mov     : std_logic IS instrucao(1);
-    ALIAS add     : std_logic IS instrucao(2);
-    ALIAS sub     : std_logic IS instrucao(3);
-    ALIAS je		: std_logic IS instrucao(4);
-	 ALIAS jmp     : std_logic IS instrucao(5);
-    ALIAS store   : std_logic IS instrucao(6);
-    ALIAS opAnd    : std_logic IS instrucao(7);
-    ALIAS opOr   : std_logic IS instrucao(8);
+--    CONSTANT opcodeAND   : std_logic_vector(3 DOWNTO 0) := "0111";
+--    CONSTANT opcodeOR    : std_logic_vector(3 DOWNTO 0) := "1000";
+	 CONSTANT opcodeMOVI  : std_logic_vector(3 DOWNTO 0) := "0111";
+	 	 CONSTANT opcodeLOAD  : std_logic_vector(3 DOWNTO 0) := "1000";
+	
 	 
 	 --           jump   jmpCompare  sel_mux_ula  sel_muxImed  habEscritaReg   operacao  habLeituraMEM  habEscritaMEM
 	 -- load			0	       0        0	  				 1              0           0000        0                 0
@@ -61,52 +54,30 @@ ARCHITECTURE main OF unidadeControle IS
 	 -- opOr			0	       0        0	  				 1              1           0000        0                 0
 	 
 BEGIN
-	WITH opCode SELECT
-		  instrucao <= 
-		  "000000001" WHEN opcodeLOAD,
-        "000000010" WHEN opcodeMOV,
-        "000000100" WHEN opcodeADD,
-        "000001000" WHEN opcodeSub,
-        "000010000" WHEN opcodeJE,
-        "000100000" WHEN opcodeJMP,
-        "001000000" WHEN opcodeSTORE,
-        "010000000" WHEN opcodeAND,
-		  "100000000" WHEN opcodeOR,
-        "000000000" WHEN OTHERS;
-		  
-	WITH opcode SELECT		  		  
-		  operacao <= 
---		  "011" WHEN opcodeLOAD,
-		  
-        "001" WHEN opcodeMOV,
-		  
-        "000" WHEN opcodeADD,
-        "001" WHEN opcodeSub,
-		  
---        "001" WHEN opcodeJE,
---        "001" WHEN opcodeJMP,
-		  
-        "010" WHEN opcodeSTORE,
-		  
-        "110" WHEN opcodeAND,
-        "111" WHEN opcodeOR,
-        "000" WHEN OTHERS;
-		  
 
+jump <= '1' when opcode = opcodeJMP else '0';
+jmpCompare <= '1' when opcode = opcodeJE else '0';
+sel_mux_ula <= '1' when opcode = opcodeADD or opcode = opcodeSUB else '0';
+sel_muxImed <= '1' when opcode = opcodeMOVI else '0';
 
-    jump <= jmp;
+habEscritaReg <= '1' when opcode = opcodeLOAD or opcode = opcodeMOV or opcode = opcodeSUB or opcode = opcodeADD or opcode = opcodeMOVI else '0';
 
-    jmpCompare <= je; 
+operacao <= "000" when opcode = opcodeADD else
+				"001" when opcode = opcodeSUB else
+				"010";
+habLeituraMEM <= '1' when opcode = opcodeLOAD else '0';
+habEscritaMEM <= '1' when opcode = opcodeSTORE else '0';
 
---    sel_mux_ula <= 
-	 
-	 sel_muxImed <= add OR sub OR mov OR opOr OR opAnd;
-	 
-	 habEscritaReg <= add OR sub OR opOr OR opAnd OR mov OR load ;
-	 
-	 habLeituraMEM <= add OR sub OR mov OR opOr OR opAnd;
-
-    habEscritaMEM <= mov;
-
+--
+--	 
+--	 CONSTANT opcodeLOAD  : std_logic_vector(3 DOWNTO 0) := "0000";
+--    CONSTANT opcodeMOV   : std_logic_vector(3 DOWNTO 0) := "0001";
+--    CONSTANT opcodeADD   : std_logic_vector(3 DOWNTO 0) := "0010";
+--    CONSTANT opcodeSUB   : std_logic_vector(3 DOWNTO 0) := "0011";
+--    CONSTANT opcodeJE    : std_logic_vector(3 DOWNTO 0) := "0100";	 
+--    CONSTANT opcodeJMP   : std_logic_vector(3 DOWNTO 0) := "0101";
+--    CONSTANT opcodeSTORE : std_logic_vector(3 DOWNTO 0) := "0110"; 
+--    CONSTANT opcodeAND   : std_logic_vector(3 DOWNTO 0) := "0111";
+--    CONSTANT opcodeOR    : std_logic_vector(3 DOWNTO 0) := "1000";
 	 
 END ARCHITECTURE;

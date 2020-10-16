@@ -6,6 +6,7 @@ ENTITY decodificador2x4 IS
     PORT (
         seletor : IN std_logic_vector(7 DOWNTO 0);
         habilita : OUT std_logic_vector(5 DOWNTO 0)
+		  adress: IN std_logic_vector(7 DOWNTO 0);
     );
 END ENTITY;
 
@@ -41,6 +42,17 @@ BEGIN
     '0';
     habilita(5) <= '1' WHEN numSeletor >= 128 AND numSeletor <= 191 ELSE
     '0';
+
+--		habilita(0) <= "0000000001" when adress = "00000000" else "0000000000";
+--		habilita(1) <= "0000000010" when adress = "00000001" else "0000000000";
+--		habilita(2) <= "0000000100" when adress = "00000010" else "0000000000";
+--		habilita(3) <= "0000001000" when adress = "00000011" else "0000000000";
+--		habilita(4) <= "0000010000" when adress = "00000100" else "0000000000";
+--		habilita(5) <= "0000100000" when adress = "00000101" else "0000000000";
+--		habilita(6) <= "0001000000" when adress = "00000110" else "0000000000";
+--		habilita(7) <= "0010000000" when adress = "00000111" else "0000000000";
+--		habilita(8) <= "0100000000" when adress = "00001000" else "0000000000";
+--		habilita(9) <= "100000000" when adress = "0001001" else "0000000000";
 
 
 END ARCHITECTURE;

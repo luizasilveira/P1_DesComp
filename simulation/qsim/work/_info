@@ -1,0 +1,107 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesCopmp/simulation/qsim
+Eprocessador
+Z1 w1602878862
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 44
+R0
+Z11 8Clock.vho
+Z12 FClock.vho
+l0
+L39 1
+V>G02A1M2iJ<=bccKT>Rk<2
+!s100 ZEY`g]GhClZ_F6`K:Pz<91
+Z13 OV;C;2020.1;71
+32
+Z14 !s110 1602878863
+!i10b 1
+Z15 !s108 1602878863.000000
+Z16 !s90 -work|work|Clock.vho|
+Z17 !s107 Clock.vho|
+!i113 1
+Z18 o-work work
+Z19 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 11 processador 0 22 >G02A1M2iJ<=bccKT>Rk<2
+!i122 44
+l394
+L118 3564
+V]CB]DC]McR802o1j:2l?V2
+!s100 9G?@?n:6j<S9@nn;42H0M3
+R13
+32
+R14
+!i10b 1
+R15
+R16
+R17
+!i113 1
+R18
+R19
+Eprocessador_vhd_vec_tst
+Z20 w1602878860
+R8
+R9
+!i122 45
+R0
+Z21 8Waveform2.vwf.vht
+Z22 FWaveform2.vwf.vht
+l0
+L32 1
+VUZ4]bW62[VQEW;on1>[;m0
+!s100 mnLP`YM7bNZ?]EWgiMog<0
+R13
+32
+Z23 !s110 1602878864
+!i10b 1
+Z24 !s108 1602878864.000000
+Z25 !s90 -work|work|Waveform2.vwf.vht|
+Z26 !s107 Waveform2.vwf.vht|
+!i113 1
+R18
+R19
+Aprocessador_arch
+R8
+R9
+Z27 DEx4 work 23 processador_vhd_vec_tst 0 22 UZ4]bW62[VQEW;on1>[;m0
+!i122 45
+l63
+Z28 L34 110
+Z29 V<91`3UY8m4QhJOiJSn@`J0
+Z30 !s100 427nH`7[DTn6Al:7NYmin1
+R13
+32
+R23
+!i10b 1
+R24
+R25
+R26
+!i113 1
+R18
+R19

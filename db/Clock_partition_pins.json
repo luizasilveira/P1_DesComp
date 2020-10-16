@@ -1,0 +1,237 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "dataOut[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataOut[7]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[0]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[1]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[2]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[3]",
+					"strict" : false
+				},
+				{
+					"name" : "adress[4]",
+					"strict" : false
+				},
+				{
+					"name" : "habEscritaReg",
+					"strict" : false
+				},
+				{
+					"name" : "habEscritaMEM",
+					"strict" : false
+				},
+				{
+					"name" : "habLeituraMEM",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTest[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestB[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[0]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[1]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[2]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[3]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[4]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[7]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
