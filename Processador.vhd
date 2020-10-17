@@ -17,17 +17,16 @@ entity processador is
 		adress: out std_logic_vector(7 DOWNTO 0);
 --		habEscritaReg: out std_logic;
 		habEscritaMEM: out std_logic;
-		habLeituraMEM: out std_logic;
+		habLeituraMEM: out std_logic
 		
 --		
 --		pinTest : out std_logic_vector(7 downto 0);
 --		pinTestA : out std_logic_vector(7 downto 0);
 --		pinTestB : out std_logic_vector(7 downto 0);
 --		pinTestSaidaULA : out std_logic_vector(7 downto 0)
-		
-
-  
-  );
+	
+ );
+ 
 end entity;
 
 architecture arch_name of processador is
