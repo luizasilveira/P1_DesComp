@@ -88,91 +88,87 @@
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[0]",
+					"name" : "habilita_t[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[1]",
+					"name" : "habilita_t[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[2]",
+					"name" : "habilitahex_t[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[3]",
+					"name" : "habilitahex_t[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[4]",
+					"name" : "habilitahex_t[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[5]",
+					"name" : "saidaDaodos_DEBUG[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX3[6]",
+					"name" : "saidaDaodos_DEBUG[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[0]",
+					"name" : "saidaDaodos_DEBUG[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[1]",
+					"name" : "saidaDaodos_DEBUG[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[2]",
+					"name" : "saidaDaodos_DEBUG[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[3]",
+					"name" : "saidaDaodos_DEBUG[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[4]",
+					"name" : "saidaDaodos_DEBUG[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[5]",
+					"name" : "saidaDaodos_DEBUG[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX4[6]",
+					"name" : "enderecoRAMROM_DEBUG[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[0]",
+					"name" : "enderecoRAMROM_DEBUG[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[1]",
+					"name" : "enderecoRAMROM_DEBUG[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[2]",
+					"name" : "enderecoRAMROM_DEBUG[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[3]",
+					"name" : "enderecoRAMROM_DEBUG[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[4]",
+					"name" : "CLOCK_50",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[5]",
+					"name" : "KEY[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX5[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SW[3]",
+					"name" : "SW[0]",
 					"strict" : false
 				},
 				{
@@ -184,15 +180,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
-					"strict" : false
-				},
-				{
-					"name" : "FPGA_RESET_N",
-					"strict" : false
-				},
-				{
-					"name" : "CLOCK_50",
+					"name" : "SW[3]",
 					"strict" : false
 				}
 			]

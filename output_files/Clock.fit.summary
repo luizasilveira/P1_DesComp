@@ -1,13 +1,13 @@
-Fitter Status : Successful - Sun Oct 18 04:15:13 2020
+Fitter Status : Successful - Sun Oct 18 19:50:11 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Clock
-Top-level Entity Name : main
+Top-level Entity Name : Clock
 Family : Cyclone V
 Device : 5CEBA4F23C7
 Timing Models : Final
-Logic utilization (in ALMs) : 15 / 18,480 ( < 1 % )
-Total registers : 14
-Total pins : 58 / 224 ( 26 % )
+Logic utilization (in ALMs) : 45 / 18,480 ( < 1 % )
+Total registers : 67
+Total pins : 90 / 224 ( 40 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 3,153,920 ( 0 % )
 Total RAM Blocks : 0 / 308 ( 0 % )
