@@ -5,7 +5,8 @@ USE IEEE.numeric_std.ALL;
 ENTITY decodificador2x4 IS
     PORT (
         seletor : IN std_logic_vector(7 DOWNTO 0);
-        habilita : OUT std_logic_vector(5 DOWNTO 0)
+        habilita : OUT std_logic_vector(5 DOWNTO 0);
+		  opcode  : IN std_logic_vector(3 DOWNTO 0)
 --		  adress: IN std_logic_vector(7 DOWNTO 0)
     );
 END ENTITY;
@@ -16,7 +17,7 @@ END ENTITY;
 --E2 (14 até 15) : Base de Tempo
 --
 --Bloco 2 (64 até 127) - Escrita:
---E3 (64 até 69) : Display de sete segmentos (Hexadecimal)
+--E3 (64 até 66) : Display de sete segmentos (Hexadecimal)
 --E4 (70 até 70) : LEDs
 --
 --Bloco 3 (128 até 191) - RAM:
@@ -34,7 +35,7 @@ BEGIN
     habilita(0) <= '1' WHEN numSeletor <= 9 ELSE '0';
     habilita(1) <= '1' WHEN numSeletor >= 10 AND numSeletor <= 13 ELSE '0';
     habilita(2) <= '1' WHEN numSeletor >= 14 AND numSeletor <= 15 ELSE '0';
-    habilita(3) <= '1' WHEN numSeletor >= 64 AND numSeletor <= 69 ELSE '0';
+    habilita(3) <= '1' WHEN numSeletor >= 64 AND numSeletor <= 66 ELSE '0';
 	 habilita(4) <= '1' WHEN numSeletor = 70 ELSE '0';
     habilita(5) <= '1' WHEN numSeletor >= 128 AND numSeletor <= 191 ELSE '0';
 

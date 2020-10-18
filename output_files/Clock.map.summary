@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Oct 17 18:00:52 2020
+Analysis & Synthesis Status : Successful - Sun Oct 18 04:14:44 2020
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : Clock
-Top-level Entity Name : processador
+Top-level Entity Name : main
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 48
-Total pins : 27
+Total registers : 10
+Total pins : 58
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0

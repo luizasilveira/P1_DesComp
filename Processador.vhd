@@ -15,6 +15,7 @@ entity processador is
 		clk: in std_logic;
 		dataOut: out std_logic_vector(7 DOWNTO 0);
 		adress: out std_logic_vector(7 DOWNTO 0);
+		opcode: out std_logic_vector(3 DOWNTO 0);
 --		habEscritaReg: out std_logic;
 		habEscritaMEM: out std_logic;
 		habLeituraMEM: out std_logic
@@ -46,7 +47,7 @@ architecture arch_name of processador is
 	
 	signal palavraControle       : std_logic_vector(9 DOWNTO 0);
 
-	alias opCode                 : std_logic_vector(23 downto 20) is Instrucao(23 downto 20);
+	alias IopCode                 : std_logic_vector(23 downto 20) is Instrucao(23 downto 20);
 	
 	alias enderecoRegistradorA   : std_logic_vector(19 DOWNTO 16) is Instrucao(19 DOWNTO 16);
 	alias enderecoRegistradorB   : std_logic_vector(15 DOWNTO 12) is Instrucao(15 DOWNTO 12);
@@ -69,7 +70,7 @@ architecture arch_name of processador is
 	UC: entity work.UnidadeControle
             port map (
 				clk => clk,
-				opCode => opCode,
+				opCode => IopCode,
 				flagZero  => flagZero,
 				palavraControle => palavraControle
 				);
@@ -144,8 +145,10 @@ architecture arch_name of processador is
 
 		dataOut <= ULAentradaA;
 		adress <= imediatoValor;
+		opcode <= IopCode;
 		habEscritaMEM <= palavraControle(0);
 		habLeituraMEM <= palavraControle(1);
+		
 		
 		
 --		habEscritaReg <= palavraControle(5);
