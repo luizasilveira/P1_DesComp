@@ -9,6 +9,7 @@ ENTITY divisorGenerico_e_Interface IS
     PORT (
         clk              : IN std_logic;
         habilitaLeitura  : IN std_logic;
+		  habilita			 : IN std_logic;
         limpaLeitura     : IN std_logic;
         leituraUmSegundo : OUT std_logic_vector(dataWidth - 1 DOWNTO 0)
     );
@@ -37,7 +38,7 @@ BEGIN
             DOUT   => sinalUmSegundo,
             ENABLE => '1',
             CLK    => saidaclk_reg1seg,
-            RST    => limpaLeitura
+            RST    => habilita and limpaLeitura
         );
 
 

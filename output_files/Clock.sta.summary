@@ -2,100 +2,52 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1100mV 85C Model Setup 'FPGA_RESET_N'
-Slack : -2.743
-TNS   : -28.146
-
 Type  : Slow 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -2.611
-TNS   : -2.611
+Slack : -5.379
+TNS   : -240.442
 
 Type  : Slow 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.875
+Slack : 0.775
 TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Hold 'FPGA_RESET_N'
-Slack : 1.016
-TNS   : 0.000
-
-Type  : Slow 1100mV 85C Model Minimum Pulse Width 'FPGA_RESET_N'
-Slack : -0.538
-TNS   : -11.530
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.538
-TNS   : -0.775
-
-Type  : Slow 1100mV 0C Model Setup 'FPGA_RESET_N'
-Slack : -2.733
-TNS   : -28.704
+TNS   : -52.175
 
 Type  : Slow 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -2.621
-TNS   : -2.621
+Slack : -5.517
+TNS   : -247.514
 
 Type  : Slow 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.799
+Slack : 0.723
 TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Hold 'FPGA_RESET_N'
-Slack : 0.998
-TNS   : 0.000
-
-Type  : Slow 1100mV 0C Model Minimum Pulse Width 'FPGA_RESET_N'
-Slack : -0.538
-TNS   : -11.327
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
 Slack : -0.538
-TNS   : -0.776
+TNS   : -52.368
 
 Type  : Fast 1100mV 85C Model Setup 'CLOCK_50'
-Slack : -1.880
-TNS   : -1.880
-
-Type  : Fast 1100mV 85C Model Setup 'FPGA_RESET_N'
-Slack : -0.908
-TNS   : -9.071
+Slack : -2.031
+TNS   : -85.452
 
 Type  : Fast 1100mV 85C Model Hold 'CLOCK_50'
-Slack : 0.356
+Slack : 0.301
 TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'FPGA_RESET_N'
-Slack : 0.428
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Minimum Pulse Width 'FPGA_RESET_N'
-Slack : -0.332
-TNS   : -4.475
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.219
-TNS   : -0.219
+Slack : -0.100
+TNS   : -6.520
 
 Type  : Fast 1100mV 0C Model Setup 'CLOCK_50'
-Slack : -1.703
-TNS   : -1.703
-
-Type  : Fast 1100mV 0C Model Setup 'FPGA_RESET_N'
-Slack : -0.796
-TNS   : -7.869
+Slack : -1.809
+TNS   : -75.257
 
 Type  : Fast 1100mV 0C Model Hold 'CLOCK_50'
-Slack : 0.221
+Slack : 0.295
 TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'FPGA_RESET_N'
-Slack : 0.384
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Minimum Pulse Width 'FPGA_RESET_N'
-Slack : -0.324
-TNS   : -4.188
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'CLOCK_50'
-Slack : -0.230
-TNS   : -0.230
+Slack : -0.100
+TNS   : -6.468
 
 ------------------------------------------------------------
