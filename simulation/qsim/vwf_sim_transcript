@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Clock -c Clock --vector_source="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/Waveform1.vwf" --testbench_file="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/Waveform1.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Clock -c Clock --vector_source="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Waveform3.vwf" --testbench_file="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/Waveform3.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,21 +26,18 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Oct 18 21:01:36 2020
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Clock -c Clock --vector_source="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/Waveform1.vwf" --testbench_file="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/Waveform1.vwf.vht"
+    Info: Processing started: Mon Oct 19 00:38:58 2020
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Clock -c Clock --vector_source="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Waveform3.vwf" --testbench_file="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/Waveform3.vwf.vht"
+Info (119006): Selected device 5CEBA4F23C7 for design "Clock"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-"pinTest[7]" in vector source file when writing test bench files
-
- 21:01:38 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+in "BarramentoEntrada_t[6]" in vector source file when writing test bench files
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/" Clock -c Clock
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/" Clock -c Clock
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -59,21 +56,22 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Sun Oct 18 21:01:39 2020
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/" Clock -c Clock
+    Info: Processing started: Mon Oct 19 00:39:00 2020
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/" Clock -c Clock
+Info (119006): Selected device 5CEBA4F23C7 for design "Clock"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Clock.vho in folder "C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file Clock.vho in folder "C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Sun Oct 18 21:01:41 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Mon Oct 19 00:39:01 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/Clock.do generated.
+C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/Clock.do generated.
 
 Completed successfully. 
 
@@ -83,15 +81,14 @@ c:/intelfpga_lite/20.1/modelsim_ase/win32aloem//vsim -c -do Clock.do
 
 Reading pref.tcl
 
-# 2020.1
 
+# 2020.1
 
 # do Clock.do
 
 # ** Warning: (vlib-34) Library already exists at "work".
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:01:43 on Oct 18,2020
+# Start time: 00:39:02 on Oct 19,2020
 # vcom -work work Clock.vho 
 
 # -- Loading package STANDARD
@@ -104,30 +101,31 @@ Reading pref.tcl
 # -- Loading package altera_lnsim_components
 # -- Loading package cyclonev_atom_pack
 # -- Loading package cyclonev_components
-# -- Compiling entity processador
-# -- Compiling architecture structure of processador
+# -- Compiling entity Clock
+# -- Compiling architecture structure of Clock
 
-# End time: 21:01:43 on Oct 18,2020, Elapsed time: 0:00:00
+# End time: 00:39:03 on Oct 19,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 21:01:43 on Oct 18,2020
-# vcom -work work Waveform1.vwf.vht 
+# Start time: 00:39:03 on Oct 19,2020
+# vcom -work work Waveform3.vwf.vht 
 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity processador_vhd_vec_tst
-# -- Compiling architecture processador_arch of processador_vhd_vec_tst
-# End time: 21:01:43 on Oct 18,2020, Elapsed time: 0:00:00
+# -- Compiling entity Clock_vhd_vec_tst
+# -- Compiling architecture Clock_arch of Clock_vhd_vec_tst
+
+# End time: 00:39:03 on Oct 19,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
-# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Processador_vhd_vec_tst 
-# Start time: 21:01:43 on Oct 18,2020
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Clock_vhd_vec_tst 
+# Start time: 00:39:03 on Oct 19,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
-# Loading work.processador_vhd_vec_tst(processador_arch)
+# Loading work.clock_vhd_vec_tst(clock_arch)
 # Loading ieee.vital_timing(body)
 # Loading ieee.vital_primitives(body)
 # Loading altera.dffeas_pack
@@ -135,31 +133,46 @@ Reading pref.tcl
 # Loading altera_lnsim.altera_lnsim_components
 # Loading cyclonev.cyclonev_atom_pack(body)
 # Loading cyclonev.cyclonev_components
-# Loading work.processador(structure)
+# Loading work.clock(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cyclonev.cyclonev_io_obuf(arch)
 # Loading cyclonev.cyclonev_io_ibuf(arch)
-# Loading cyclonev.cyclonev_clkena(behavior)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 31764 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 51774 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
 
-# End time: 21:01:45 on Oct 18,2020, Elapsed time: 0:00:02
+# End time: 00:39:04 on Oct 19,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/Waveform1.vwf...
+Reading C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Waveform3.vwf...
 
-Reading C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/Clock.msim.vcd...
+Reading C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/Clock.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim/Clock_20201018210145.sim.vwf
+Warning: saidaDaodos_DEBUG[7] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[6] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[5] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[4] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[3] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[2] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[1] - signal not found in VCD.
+
+Warning: saidaDaodos_DEBUG[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim/Clock_20201019003904.sim.vwf
 
 Finished VCD to VWF conversion.
 

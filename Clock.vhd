@@ -16,8 +16,15 @@ entity Clock is
         HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT std_logic_vector(6 DOWNTO 0);
 		  habilita_t : OUT std_logic_vector(7 downto 0);
 		  habilitahex_t : OUT std_logic_vector(7 downto 0);
-		  saidaDaodos_DEBUG    : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
-		  enderecoRAMROM_DEBUG    : OUT std_logic_vector(dataWidth - 1 DOWNTO 0)
+		  BarramentoSaida_t    : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
+		  enderecoRAMROM_DEBUG    : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
+		  ULA_t : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
+		  opcode_t : OUT std_logic_vector(3 DOWNTO 0);
+		  BarramentoEntrada_t : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
+		  habBaseTempo_t : OUT std_logic;
+		  LimpaBaseTempo_t  : OUT std_logic
+		  
+		  
 --		  limpa_t <= out std_logic;
 
   
@@ -29,9 +36,9 @@ architecture arch_name of Clock is
 
 	signal BarramentoEntrada, BarramentoSaida, adress 			: std_logic_vector (7 DOWNTO 0);
 			 
-	signal habEscritaMEM, habLeituraMEM,hableituraBaseTempo,LimpaBaseTempo   	: std_logic;
+	signal habEscritaMEM, habLeituraMEM   	: std_logic;
 	
-	signal habilita, habhex              				: std_logic_vector(7 DOWNTO 0);	
+	signal habilita, habhex, ula_out             				: std_logic_vector(7 DOWNTO 0);	
 	
 	signal instOpCode              				: std_logic_vector(3 DOWNTO 0);	
 	
@@ -48,6 +55,7 @@ architecture arch_name of Clock is
 	ALIAS habHex4      : std_logic IS habhex(4);
 	ALIAS habHex5      : std_logic IS habhex(5);
 	ALIAS habBaseTempo : std_logic IS habhex(6);
+	ALIAS LimpaBaseTempo  : std_logic IS habhex(7);
 	
 
 	
@@ -85,7 +93,9 @@ architecture arch_name of Clock is
 				dataOut => BarramentoSaida,
 				adress  => adress,
 				habEscritaMEM => habEscritaMEM,
-				habLeituraMEM => habLeituraMEM
+				habLeituraMEM => habLeituraMEM,
+				pinTestSaidaULA => ula_out,
+				pinOpcode => instOpCode
 				);
 --			
 
@@ -146,7 +156,7 @@ architecture arch_name of Clock is
 				habilita3 => habHex3,
 				habilita4 => habHex4,
 				habilita5 => habHex5,
-				clr       => '1',
+				clr       => LimpaBaseTempo,
             HEX0      => s_HEX0,
             HEX1      => s_HEX1,
             HEX2      => s_HEX2,
@@ -162,9 +172,9 @@ architecture arch_name of Clock is
         )
         PORT MAP(
             clk              => CLOCK_50,
-            habilitaLeitura  => hableituraBaseTempo,
-				habilita			  => habBaseTempo,
-            limpaLeitura     => '1',
+            habilitaLeitura  => habBaseTempo,
+				--habilita			  => habBaseTempo,
+            limpaLeitura     => LimpaBaseTempo,
             leituraUmSegundo => BarramentoEntrada
         );	
 --	
@@ -176,8 +186,14 @@ architecture arch_name of Clock is
 	 HEX5 <= s_HEX5;
 	 habilita_t <= habilita;
 	 habilitahex_t <= habhex;
-	 saidaDaodos_DEBUG  <= BarramentoSaida;
+	 BarramentoSaida_t  <= BarramentoSaida;
 	 enderecoRAMROM_DEBUG <= adress;
+	 ULA_t <= ula_out;
+	 opcode_t <= instOpCode;
+	 BarramentoEntrada_t <= BarramentoEntrada;
+	 habBaseTempo_t <= habBaseTempo;
+	 LimpaBaseTempo_t <=LimpaBaseTempo;
+
 --	 limpa_t <= LimpaBaseTempo;
 
 	 

@@ -37,5 +37,6 @@ ARCHITECTURE comportamento OF decodificador2x4 IS
         habhex(4) <= '1' WHEN numSeletor = 68 ELSE '0'; --HEX5
         habhex(5) <= '1' WHEN numSeletor = 69  ELSE '0'; --HEX16
         habhex(6) <= '1' WHEN numSeletor = 14  ELSE '0'; --Base de Tempo
+		  habhex(7) <= '1' WHEN numSeletor = 15  ELSE '0'; --Limpa Base de Tempo
 	 
 END ARCHITECTURE;

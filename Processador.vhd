@@ -27,7 +27,8 @@ entity processador is
 		pinTestA : out std_logic_vector(7 downto 0);
 		pinTestB : out std_logic_vector(7 downto 0);
 		pinTestSaidaULA : out std_logic_vector(7 downto 0);
-		pinTestflagZero : out std_logic
+		pinTestflagZero : out std_logic;
+		pinOpcode : out std_logic_vector(3 downto 0)
 	);
  
 end entity;
@@ -170,5 +171,6 @@ architecture arch_name of processador is
 		pinTestSaidaULA <= ULA_Out;
 		
 		pinTestflagZero <= flagZero;
+		pinOpcode <= opCode;
 --	
 end architecture;

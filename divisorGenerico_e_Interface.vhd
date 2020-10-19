@@ -9,37 +9,34 @@ ENTITY divisorGenerico_e_Interface IS
     PORT (
         clk              : IN std_logic;
         habilitaLeitura  : IN std_logic;
-		  habilita			 : IN std_logic;
         limpaLeitura     : IN std_logic;
         leituraUmSegundo : OUT std_logic_vector(dataWidth - 1 DOWNTO 0)
     );
 END ENTITY;
 
 ARCHITECTURE interface OF divisorGenerico_e_Interface IS
-    SIGNAL sinalUmSegundo   : std_logic_vector(0 DOWNTO 0);
+    SIGNAL sinalUmSegundo   : std_logic;
     SIGNAL saidaclk_reg1seg : std_logic;
    
 BEGIN
     baseTempo : ENTITY work.divisorGenerico
         GENERIC MAP(
-            divisor => 25000000
+            divisor => 250000000
         ) -- divide por 10.
         PORT MAP(
             clk       => clk,
             saida_clk => saidaclk_reg1seg
         );
 
-    registraUmSegundo : ENTITY work.registradorGenerico
-        GENERIC MAP(
-            larguraDados => 1
-        )
+    registraUmSegundo : ENTITY work.flipflop
         PORT MAP(
-            DIN    => "1",
-            DOUT   => sinalUmSegundo,
+            data_in    => '1',
             ENABLE => '1',
-            CLK    => saidaclk_reg1seg,
-            RST    => habilita and limpaLeitura
+            clk    => saidaclk_reg1seg,
+            rst    => limpaLeitura,
+			   data_out   => sinalUmSegundo
         );
+		  
 
 
     -- Faz o tristate de saida:

@@ -54,14 +54,10 @@ begin
 	 process(clk)
     begin
 		if (rising_edge(CLK)) then
-		 if (habilita = '1' AND apaga = '1') then
+		 if (habilita = '1') then
 				saida7seg <= rascSaida7seg;
 		 end if;
 		end if;
     end process;
---
---    saida7seg <=     "1100010" when (overFlow='1') else
---                            "1111111" when (apaga='1' and negativo='0') else
---                            "0111111" when (apaga='0' and negativo='1') else
---                            rascSaida7seg;
+
 end architecture;
