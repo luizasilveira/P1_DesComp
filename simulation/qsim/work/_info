@@ -10,7 +10,7 @@ z2
 cModel Technology
 dC:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesCopmp/simulation/qsim
 Eclock
-Z0 w1603078741
+Z0 w1603083140
 Z1 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 ^K2eeK[IVbX]]MLcdOEI91
 Z2 DPx8 cyclonev 19 cyclonev_components 0 22 GFL[QAd@dAZF:`jjOGn9>2
 Z3 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 3dzZ?YU_4FC5UU0cTXRET1
@@ -20,24 +20,24 @@ Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
 Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z8 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 Z9 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
-!i122 92
+!i122 100
 Z10 dC:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/simulation/qsim
 Z11 8Clock.vho
 Z12 FClock.vho
 l0
 Z13 L39 1
-V`[Izf:WB<eRAVN^QKV^o33
-!s100 LaWNMfZgAY]IML[72>MDC1
+V9Vce0FW]JWj]jWe4lL>jk2
+!s100 31FzK]F<5<4CnhF6B53EM2
 Z14 OV;C;2020.1;71
 32
-!s110 1603078742
+Z15 !s110 1603083146
 !i10b 1
-Z15 !s108 1603078742.000000
-Z16 !s90 -work|work|Clock.vho|
-Z17 !s107 Clock.vho|
+Z16 !s108 1603083145.000000
+Z17 !s90 -work|work|Clock.vho|
+Z18 !s107 Clock.vho|
 !i113 1
-Z18 o-work work
-Z19 tExplicit 1 CvgOpt 0
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
 Astructure
 R1
 R2
@@ -48,27 +48,27 @@ R6
 R7
 R8
 R9
-DEx4 work 5 clock 0 22 `[Izf:WB<eRAVN^QKV^o33
-!i122 92
-l485
-L63 5640
-VcE:R2Rm5@Dkb0d:GRn2A53
-!s100 X7:XaTkMIoNaa4?lmbV0W3
+DEx4 work 5 clock 0 22 9Vce0FW]JWj]jWe4lL>jk2
+!i122 100
+l728
+L178 7763
+Veo?`n>LAdKNi0a8:eN3a21
+!s100 mQFcgF9M7_8S38;AM=lSd0
 R14
 32
-Z20 !s110 1603078743
-!i10b 1
 R15
+!i10b 1
 R16
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Eclock_vhd_vec_tst
-Z21 w1603078739
+Z21 w1603083138
 R7
 R8
-!i122 93
+!i122 101
 R10
 Z22 8Waveform3.vwf.vht
 Z23 FWaveform3.vwf.vht
@@ -78,35 +78,35 @@ VEORm9Y]]]T8e:aYo:dQR81
 !s100 mGH_UoPh4i]i1Qk;UB?Di0
 R14
 32
-R20
+Z25 !s110 1603083147
 !i10b 1
-Z25 !s108 1603078743.000000
-Z26 !s90 -work|work|Waveform3.vwf.vht|
-Z27 !s107 Waveform3.vwf.vht|
+Z26 !s108 1603083147.000000
+Z27 !s90 -work|work|Waveform3.vwf.vht|
+Z28 !s107 Waveform3.vwf.vht|
 !i113 1
-R18
 R19
+R20
 Aclock_arch
 R7
 R8
-Z28 DEx4 work 17 clock_vhd_vec_tst 0 22 EORm9Y]]]T8e:aYo:dQR81
-!i122 93
+Z29 DEx4 work 17 clock_vhd_vec_tst 0 22 EORm9Y]]]T8e:aYo:dQR81
+!i122 101
 l79
-Z29 L34 177
-Z30 VOJzjBAO;U@Rc`gJG_C:VD1
-Z31 !s100 W`a4?0i8aARi;_l]Cz0>`1
+Z30 L34 175
+V:<`fT9Tc^GX[jb4S8D>Yc3
+!s100 =W267j@fY7N]eR35=NS3g1
 R14
 32
-R20
-!i10b 1
 R25
+!i10b 1
 R26
 R27
+R28
 !i113 1
-R18
 R19
+R20
 Eprocessador
-Z32 w1603065701
+Z31 w1603065701
 R1
 R2
 R3
@@ -117,7 +117,7 @@ R7
 R8
 R9
 !i122 68
-Z33 dC:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim
+Z32 dC:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/descomp/P1_DesComp/simulation/qsim
 R11
 R12
 l0
@@ -126,14 +126,14 @@ VUkbHlB15Q^mBiO1THbBa82
 !s100 zE]dYT8Q9U4jg@2VPPoV10
 R14
 32
-Z34 !s110 1603065703
+Z33 !s110 1603065703
 !i10b 1
-Z35 !s108 1603065703.000000
-R16
+Z34 !s108 1603065703.000000
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Astructure
 R1
 R2
@@ -152,36 +152,36 @@ VU]^V6g05SW5Y@m^E4CnM>3
 !s100 O7kQT2m?UCH??kU55J<7W2
 R14
 32
-R34
+R33
 !i10b 1
-R35
-R16
+R34
 R17
-!i113 1
 R18
+!i113 1
 R19
+R20
 Eprocessador_vhd_vec_tst
-Z36 w1603065698
+Z35 w1603065698
 R7
 R8
 !i122 69
-R33
-Z37 8Waveform1.vwf.vht
-Z38 FWaveform1.vwf.vht
+R32
+Z36 8Waveform1.vwf.vht
+Z37 FWaveform1.vwf.vht
 l0
 R24
 VUZ4]bW62[VQEW;on1>[;m0
 !s100 mnLP`YM7bNZ?]EWgiMog<0
 R14
 32
-R34
+R33
 !i10b 1
-R35
-Z39 !s90 -work|work|Waveform1.vwf.vht|
-Z40 !s107 Waveform1.vwf.vht|
+R34
+Z38 !s90 -work|work|Waveform1.vwf.vht|
+Z39 !s107 Waveform1.vwf.vht|
 !i113 1
-R18
 R19
+R20
 Aprocessador_arch
 R7
 R8
@@ -193,11 +193,11 @@ VB;3Fg34[:fJ;k<HgZL3NQ3
 !s100 Zl79fnMV8O7Rfd2W55ngj1
 R14
 32
-R34
+R33
 !i10b 1
-R35
+R34
+R38
 R39
-R40
 !i113 1
-R18
 R19
+R20

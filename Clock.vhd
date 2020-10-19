@@ -105,6 +105,7 @@ architecture arch_name of Clock is
 			seletor => adress,
 			habilita => habilita,
 			habhex => habhex
+--			LOAD => instOpCode := "0001"
 			);
 									
 				
@@ -165,6 +166,26 @@ architecture arch_name of Clock is
             HEX5      => s_HEX5
 				
         );
+		  
+--		          clk             : IN std_logic;
+--        habilitaLeitura : IN std_logic;
+--        limpaLeitura    : IN std_logic;
+--        seletorClk      : IN std_logic;
+--
+--        -- Output ports
+--        leituraUmSegundo : OUT std_logic_vector(DATA_WIDTH - 1 DOWNTO 0)
+
+--	 interfaceBaseTempo : ENTITY work.baseDeTempo
+--			  GENERIC MAP(
+--					DATA_WIDTH => dataWidth
+--			  )
+--			  PORT MAP(
+--					clk              => CLOCK_50,
+--					habilitaLeitura  => habBaseTempo,
+--					limpaLeitura     => LimpaBaseTempo,
+--					seletorClk => '0',
+--					leituraUmSegundo => BarramentoEntrada
+--			  );	
 
     interfaceBaseTempo : ENTITY work.divisorGenerico_e_Interface
         GENERIC MAP(
@@ -173,11 +194,11 @@ architecture arch_name of Clock is
         PORT MAP(
             clk              => CLOCK_50,
             habilitaLeitura  => habBaseTempo,
-				--habilita			  => habBaseTempo,
             limpaLeitura     => LimpaBaseTempo,
+				seletorClk => '0',
             leituraUmSegundo => BarramentoEntrada
         );	
---	
+	
 	 HEX0 <= s_HEX0;
 	 HEX1 <= s_HEX1;
 	 HEX2 <= s_HEX2;

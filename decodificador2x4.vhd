@@ -10,7 +10,7 @@ ENTITY decodificador2x4 IS
         seletor : IN std_logic_vector(7 DOWNTO 0);
 
         -- portas de saída
-        habilita : OUT std_logic_vector(7 DOWNTO 0);
+      habilita : OUT std_logic_vector(7 DOWNTO 0);
 		habhex : OUT std_logic_vector(7 DOWNTO 0)
 
     );

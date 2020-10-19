@@ -1552,28 +1552,7 @@ saida7seg[6] <= saida7seg[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Clock|divisorGenerico_e_Interface:interfaceBaseTempo
-clk => divisorgenerico:baseTempo.clk
-habilitaLeitura => leituraUmSegundo[0].OE
-habilitaLeitura => leituraUmSegundo[1].OE
-habilitaLeitura => leituraUmSegundo[2].OE
-habilitaLeitura => leituraUmSegundo[3].OE
-habilitaLeitura => leituraUmSegundo[4].OE
-habilitaLeitura => leituraUmSegundo[5].OE
-habilitaLeitura => leituraUmSegundo[6].OE
-habilitaLeitura => leituraUmSegundo[7].OE
-limpaLeitura => flipflop:registraUmSegundo.rst
-leituraUmSegundo[0] <= leituraUmSegundo[0].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[1] <= leituraUmSegundo[1].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[2] <= leituraUmSegundo[2].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[3] <= leituraUmSegundo[3].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[4] <= leituraUmSegundo[4].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[5] <= leituraUmSegundo[5].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[6] <= leituraUmSegundo[6].DB_MAX_OUTPUT_PORT_TYPE
-leituraUmSegundo[7] <= leituraUmSegundo[7].DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Clock|divisorGenerico_e_Interface:interfaceBaseTempo|divisorGenerico:baseTempo
-clk => tick.CLK
+clk => passouUmSegundo.CLK
 clk => contador[0].CLK
 clk => contador[1].CLK
 clk => contador[2].CLK
@@ -1601,15 +1580,54 @@ clk => contador[23].CLK
 clk => contador[24].CLK
 clk => contador[25].CLK
 clk => contador[26].CLK
-clk => contador[27].CLK
-saida_clk <= tick.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|Clock|divisorGenerico_e_Interface:interfaceBaseTempo|flipflop:registraUmSegundo
-data_in => data_out~reg0.DATAIN
-ENABLE => data_out~reg0.ENA
-clk => data_out~reg0.CLK
-rst => data_out~reg0.ACLR
-data_out <= data_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+habilitaLeitura => leituraUmSegundo[0].OE
+habilitaLeitura => leituraUmSegundo[1].OE
+habilitaLeitura => leituraUmSegundo[2].OE
+habilitaLeitura => leituraUmSegundo[3].OE
+habilitaLeitura => leituraUmSegundo[4].OE
+habilitaLeitura => leituraUmSegundo[5].OE
+habilitaLeitura => leituraUmSegundo[6].OE
+habilitaLeitura => leituraUmSegundo[7].OE
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => contador.OUTPUTSELECT
+limpaLeitura => passouUmSegundo.OUTPUTSELECT
+seletorClk => LessThan0.IN31
+seletorClk => LessThan0.IN32
+seletorClk => LessThan0.IN60
+seletorClk => LessThan0.IN61
+seletorClk => LessThan0.IN62
+leituraUmSegundo[0] <= leituraUmSegundo[0].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[1] <= leituraUmSegundo[1].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[2] <= leituraUmSegundo[2].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[3] <= leituraUmSegundo[3].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[4] <= leituraUmSegundo[4].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[5] <= leituraUmSegundo[5].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[6] <= leituraUmSegundo[6].DB_MAX_OUTPUT_PORT_TYPE
+leituraUmSegundo[7] <= leituraUmSegundo[7].DB_MAX_OUTPUT_PORT_TYPE
 
 

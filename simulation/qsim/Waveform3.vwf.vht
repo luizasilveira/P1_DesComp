@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/19/2020 00:38:59"
+-- Generated on "10/19/2020 01:52:17"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Clock
 -- 
@@ -55,25 +55,25 @@ SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
 SIGNAL ULA_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT Clock
 	PORT (
-	BarramentoEntrada_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	BarramentoSaida_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	BarramentoEntrada_t : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
+	BarramentoSaida_t : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CLOCK_50 : IN STD_LOGIC;
-	enderecoRAMROM_DEBUG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	enderecoRAMROM_DEBUG : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
 	FPGA_RESET_N : IN STD_LOGIC;
-	habBaseTempo_t : OUT STD_LOGIC;
-	habilita_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	habilitahex_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
-	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	habBaseTempo_t : BUFFER STD_LOGIC;
+	habilita_t : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
+	habilitahex_t : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0);
+	HEX0 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : BUFFER STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	LimpaBaseTempo_t : OUT STD_LOGIC;
-	opcode_t : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	LimpaBaseTempo_t : BUFFER STD_LOGIC;
+	opcode_t : BUFFER STD_LOGIC_VECTOR(3 DOWNTO 0);
 	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
-	ULA_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+	ULA_t : BUFFER STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -104,7 +104,7 @@ BEGIN
 -- CLOCK_50
 t_prcs_CLOCK_50: PROCESS
 BEGIN
-	FOR i IN 1 TO 16
+	FOR i IN 1 TO 333
 	LOOP
 		CLOCK_50 <= '0';
 		WAIT FOR 30000 ps;
@@ -112,8 +112,6 @@ BEGIN
 		WAIT FOR 30000 ps;
 	END LOOP;
 	CLOCK_50 <= '0';
-	WAIT FOR 30000 ps;
-	CLOCK_50 <= '1';
 WAIT;
 END PROCESS t_prcs_CLOCK_50;
 

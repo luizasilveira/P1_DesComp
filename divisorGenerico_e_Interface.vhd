@@ -10,36 +10,40 @@ ENTITY divisorGenerico_e_Interface IS
         clk              : IN std_logic;
         habilitaLeitura  : IN std_logic;
         limpaLeitura     : IN std_logic;
+		  seletorClk		 : IN std_logic;
         leituraUmSegundo : OUT std_logic_vector(dataWidth - 1 DOWNTO 0)
     );
 END ENTITY;
 
 ARCHITECTURE interface OF divisorGenerico_e_Interface IS
-    SIGNAL sinalUmSegundo   : std_logic;
-    SIGNAL saidaclk_reg1seg : std_logic;
+    SIGNAL passouUmSegundo : std_logic := '0';
+
+    -- Contador de clocks, usado para verificar se passou o tempo certo.
+    SIGNAL contador : INTEGER RANGE 0 TO 100000000 := 0;
+
+    -- Quantos clocks devemos esperar.
+    signal clock_slow : NATURAL := 5000000;
+    signal clock_fast : NATURAL := 1000000;
+    SIGNAL num_clocks : NATURAL;
    
 BEGIN
-    baseTempo : ENTITY work.divisorGenerico
-        GENERIC MAP(
-            divisor => 250000000
-        ) -- divide por 10.
-        PORT MAP(
-            clk       => clk,
-            saida_clk => saidaclk_reg1seg
-        );
+    num_clocks <= clock_fast WHEN seletorClk = '1' ELSE clock_slow;
+    PROCESS (clk)
+    BEGIN
+        IF rising_edge(clk) THEN
+            IF (limpaLeitura = '1') THEN
+                contador        <= 0;
+                passouUmSegundo <= '0';
+            ELSIF contador >= num_clocks THEN
+                passouUmSegundo <= '1';
+            ELSE
+                contador        <= contador + 1;
+                passouUmSegundo <= '0';
+            END IF;
+        END IF;
+    END PROCESS;
 
-    registraUmSegundo : ENTITY work.flipflop
-        PORT MAP(
-            data_in    => '1',
-            ENABLE => '1',
-            clk    => saidaclk_reg1seg,
-            rst    => limpaLeitura,
-			   data_out   => sinalUmSegundo
-        );
-		  
-
-
-    -- Faz o tristate de saida:
-    leituraUmSegundo <= "0000000" & sinalUmSegundo  WHEN habilitaLeitura = '1' ELSE
-        (OTHERS => 'Z');
-END ARCHITECTURE interface;
+    -- Mudamos apenas o primeiro bit da sa�da, retirando a necessidade de um
+    -- extensor de sinal no fluxo de dados.
+    leituraUmSegundo <= ("0000000" & passouUmSegundo) WHEN habilitaLeitura = '1' ELSE
+        (OTHERS => 'Z');END ARCHITECTURE interface;
