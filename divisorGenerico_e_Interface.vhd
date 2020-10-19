@@ -22,7 +22,7 @@ ARCHITECTURE interface OF divisorGenerico_e_Interface IS
     SIGNAL contador : INTEGER RANGE 0 TO 100000000 := 0;
 
     -- Quantos clocks devemos esperar.
-    signal clock_slow : NATURAL := 5000000;
+    signal clock_slow : NATURAL := 50000000;
     signal clock_fast : NATURAL := 1000000;
     SIGNAL num_clocks : NATURAL;
    

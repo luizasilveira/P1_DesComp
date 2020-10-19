@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/18/2020 20:57:51"
+-- Generated on "10/19/2020 10:50:05"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          Clock
 -- 
@@ -34,9 +34,12 @@ END Clock_vhd_vec_tst;
 ARCHITECTURE Clock_arch OF Clock_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL BarramentoEntrada_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL BarramentoSaida_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL CLOCK_50 : STD_LOGIC;
 SIGNAL enderecoRAMROM_DEBUG : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL FPGA_RESET_N : STD_LOGIC;
+SIGNAL habBaseTempo_t : STD_LOGIC;
 SIGNAL habilita_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL habilitahex_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -46,13 +49,18 @@ SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
 SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
-SIGNAL saidaDaodos_DEBUG : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL LimpaBaseTempo_t : STD_LOGIC;
+SIGNAL opcode_t : STD_LOGIC_VECTOR(3 DOWNTO 0);
 SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
+SIGNAL ULA_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT Clock
 	PORT (
+	BarramentoEntrada_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	BarramentoSaida_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	CLOCK_50 : IN STD_LOGIC;
 	enderecoRAMROM_DEBUG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	FPGA_RESET_N : IN STD_LOGIC;
+	habBaseTempo_t : OUT STD_LOGIC;
 	habilita_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	habilitahex_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
@@ -62,17 +70,22 @@ COMPONENT Clock
 	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
 	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
-	saidaDaodos_DEBUG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
+	LimpaBaseTempo_t : OUT STD_LOGIC;
+	opcode_t : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+	ULA_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
 	i1 : Clock
 	PORT MAP (
 -- list connections between master ports and signals
+	BarramentoEntrada_t => BarramentoEntrada_t,
+	BarramentoSaida_t => BarramentoSaida_t,
 	CLOCK_50 => CLOCK_50,
 	enderecoRAMROM_DEBUG => enderecoRAMROM_DEBUG,
 	FPGA_RESET_N => FPGA_RESET_N,
+	habBaseTempo_t => habBaseTempo_t,
 	habilita_t => habilita_t,
 	habilitahex_t => habilitahex_t,
 	HEX0 => HEX0,
@@ -82,24 +95,22 @@ BEGIN
 	HEX4 => HEX4,
 	HEX5 => HEX5,
 	KEY => KEY,
-	saidaDaodos_DEBUG => saidaDaodos_DEBUG,
-	SW => SW
+	LimpaBaseTempo_t => LimpaBaseTempo_t,
+	opcode_t => opcode_t,
+	SW => SW,
+	ULA_t => ULA_t
 	);
 
 -- CLOCK_50
 t_prcs_CLOCK_50: PROCESS
 BEGIN
-	FOR i IN 1 TO 16
-	LOOP
-		CLOCK_50 <= '0';
-		WAIT FOR 30000 ps;
-		CLOCK_50 <= '1';
-		WAIT FOR 30000 ps;
-	END LOOP;
+LOOP
 	CLOCK_50 <= '0';
-	WAIT FOR 30000 ps;
+	WAIT FOR 50000 ps;
 	CLOCK_50 <= '1';
-WAIT;
+	WAIT FOR 50000 ps;
+	IF (NOW >= 10000000 ps) THEN WAIT; END IF;
+END LOOP;
 END PROCESS t_prcs_CLOCK_50;
 
 -- FPGA_RESET_N

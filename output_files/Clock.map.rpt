@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Clock
-Mon Oct 19 02:02:45 2020
+Mon Oct 19 11:59:02 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -64,13 +64,13 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 19 02:02:45 2020       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 19 11:59:02 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Clock                                       ;
 ; Top-level Entity Name           ; Clock                                       ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 115                                         ;
+; Total registers                 ; 99                                          ;
 ; Total pins                      ; 112                                         ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
@@ -176,7 +176,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 4           ;
+; Number detected on machine ; 2           ;
 ; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -188,29 +188,29 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                           ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------+---------+
-; Clock.vhd                        ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd                       ;         ;
-; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/muxGenerico2x1.vhd              ;         ;
-; ULA.vhd                          ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/ULA.vhd                         ;         ;
-; registradorGenerico.vhd          ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/registradorGenerico.vhd         ;         ;
-; bancoRegistradoresArqRegReg.vhd  ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/bancoRegistradoresArqRegReg.vhd ;         ;
-; memoriaROM.vhd                   ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaROM.vhd                  ;         ;
-; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd                  ;         ;
-; UnidadeControle.vhd              ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/UnidadeControle.vhd             ;         ;
-; decodificador2x4.vhd             ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/decodificador2x4.vhd            ;         ;
-; somaConstante.vhd                ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/somaConstante.vhd               ;         ;
-; Processador.vhd                  ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd                 ;         ;
-; interfaceCHAVES.vhd              ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd             ;         ;
-; interfaceBOTOES.vhd              ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceBOTOES.vhd             ;         ;
-; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/conversorHex7Seg.vhd            ;         ;
-; divisorGenerico_e_Interface.vhd  ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico_e_Interface.vhd ;         ;
-; interfaceHEX.vhd                 ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceHEX.vhd                ;         ;
-; flipflop.vhd                     ; yes             ; User VHDL File  ; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/flipflop.vhd                    ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
+; Clock.vhd                        ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd                       ;         ;
+; muxGenerico2x1.vhd               ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/muxGenerico2x1.vhd              ;         ;
+; ULA.vhd                          ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/ULA.vhd                         ;         ;
+; registradorGenerico.vhd          ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/registradorGenerico.vhd         ;         ;
+; bancoRegistradoresArqRegReg.vhd  ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/bancoRegistradoresArqRegReg.vhd ;         ;
+; memoriaROM.vhd                   ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaROM.vhd                  ;         ;
+; memoriaRAM.vhd                   ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd                  ;         ;
+; UnidadeControle.vhd              ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/UnidadeControle.vhd             ;         ;
+; decodificador2x4.vhd             ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/decodificador2x4.vhd            ;         ;
+; somaConstante.vhd                ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/somaConstante.vhd               ;         ;
+; Processador.vhd                  ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd                 ;         ;
+; interfaceCHAVES.vhd              ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd             ;         ;
+; interfaceBOTOES.vhd              ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceBOTOES.vhd             ;         ;
+; conversorHex7Seg.vhd             ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/conversorHex7Seg.vhd            ;         ;
+; divisorGenerico_e_Interface.vhd  ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico_e_Interface.vhd ;         ;
+; interfaceHEX.vhd                 ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceHEX.vhd                ;         ;
+; flipflop.vhd                     ; yes             ; User VHDL File  ; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/flipflop.vhd                    ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +--------------------------------------------------------------+
@@ -218,25 +218,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 111            ;
+; Estimate of Logic utilization (ALMs needed) ; 106            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 174            ;
+; Combinational ALUT usage for logic          ; 173            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 39             ;
-;     -- 5 input functions                    ; 38             ;
-;     -- 4 input functions                    ; 33             ;
-;     -- <=3 input functions                  ; 64             ;
+;     -- 6 input functions                    ; 33             ;
+;     -- 5 input functions                    ; 43             ;
+;     -- 4 input functions                    ; 23             ;
+;     -- <=3 input functions                  ; 74             ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 115            ;
+; Dedicated logic registers                   ; 99             ;
 ;                                             ;                ;
 ; I/O pins                                    ; 112            ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 115            ;
-; Total fan-out                               ; 1248           ;
-; Average fan-out                             ; 2.43           ;
+; Maximum fan-out                             ; 99             ;
+; Total fan-out                               ; 1174           ;
+; Average fan-out                             ; 2.37           ;
 +---------------------------------------------+----------------+
 
 
@@ -245,19 +245,19 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name                 ; Library Name ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-----------------------------+--------------+
-; |Clock                                              ; 174 (1)             ; 115 (0)                   ; 0                 ; 0          ; 112  ; 0            ; |Clock                                                                   ; Clock                       ; work         ;
-;    |decodificador2x4:Decoder|                       ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|decodificador2x4:Decoder                                          ; decodificador2x4            ; work         ;
+; |Clock                                              ; 173 (1)             ; 99 (0)                    ; 0                 ; 0          ; 112  ; 0            ; |Clock                                                                   ; Clock                       ; work         ;
+;    |decodificador2x4:Decoder|                       ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|decodificador2x4:Decoder                                          ; decodificador2x4            ; work         ;
 ;    |divisorGenerico_e_Interface:interfaceBaseTempo| ; 34 (34)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|divisorGenerico_e_Interface:interfaceBaseTempo                    ; divisorGenerico_e_Interface ; work         ;
 ;    |interfaceBOTOES:interfaceBtn|                   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceBOTOES:interfaceBtn                                      ; interfaceBOTOES             ; work         ;
 ;    |interfaceCHAVES:interfaceChaves|                ; 6 (6)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceCHAVES:interfaceChaves                                   ; interfaceCHAVES             ; work         ;
 ;    |interfaceHEX:interfaceHEX|                      ; 7 (0)               ; 14 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceHEX:interfaceHEX                                         ; interfaceHEX                ; work         ;
 ;       |conversorHex7Seg:conversorHex0|              ; 7 (7)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex0          ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:conversorHex1|              ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex1          ; conversorHex7Seg            ; work         ;
-;    |processador:processador|                        ; 114 (1)             ; 73 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador                                           ; processador                 ; work         ;
+;    |processador:processador|                        ; 111 (1)             ; 57 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador                                           ; processador                 ; work         ;
 ;       |ULA:ULA|                                     ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|ULA:ULA                                   ; ULA                         ; work         ;
-;       |UnidadeControle:UC|                          ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|UnidadeControle:UC                        ; UnidadeControle             ; work         ;
-;       |bancoRegistradoresArqRegReg:Registradores|   ; 41 (41)             ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|bancoRegistradoresArqRegReg:Registradores ; bancoRegistradoresArqRegReg ; work         ;
-;       |flipflop:flipflop|                           ; 6 (6)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|flipflop:flipflop                         ; flipflop                    ; work         ;
+;       |UnidadeControle:UC|                          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|UnidadeControle:UC                        ; UnidadeControle             ; work         ;
+;       |bancoRegistradoresArqRegReg:Registradores|   ; 38 (38)             ; 48 (48)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|bancoRegistradoresArqRegReg:Registradores ; bancoRegistradoresArqRegReg ; work         ;
+;       |flipflop:flipflop|                           ; 5 (5)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|flipflop:flipflop                         ; flipflop                    ; work         ;
 ;       |memoriaROM:ROM|                              ; 29 (29)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|memoriaROM:ROM                            ; memoriaROM                  ; work         ;
 ;       |muxGenerico2x1:MUX_ULA|                      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|muxGenerico2x1:MUX_ULA                    ; muxGenerico2x1              ; work         ;
 ;       |registradorGenerico:PC|                      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|registradorGenerico:PC                    ; registradorGenerico         ; work         ;
@@ -304,42 +304,58 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~139 ; Lost fanout                                 ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~140 ; Lost fanout                                 ;
 ; interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex3|saida7seg[0..6]          ; Stuck at GND due to stuck port clock_enable ;
+; interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex4|saida7seg[0..6]          ; Stuck at GND due to stuck port clock_enable ;
 ; interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex5|saida7seg[0..6]          ; Stuck at GND due to stuck port clock_enable ;
 ; interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex2|saida7seg[0..6]          ; Stuck at GND due to stuck port clock_enable ;
-; interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex4|saida7seg[0..6]          ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~101 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~93  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~102 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~94  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~103 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~95  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~104 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~96  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~105 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~97  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~106 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~98  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~107 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~99  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~108 ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~100 ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~45  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~53  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~61  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~37  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~46  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~54  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~62  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~38  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~47  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~55  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~63  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~39  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~48  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~56  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~64  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~40  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~49  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~57  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~65  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~41  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~50  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~58  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~66  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~42  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~51  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~59  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~67  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~43  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~52  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~60  ; Stuck at GND due to stuck port clock_enable ;
+; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~68  ; Stuck at GND due to stuck port clock_enable ;
 ; processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador~44  ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 92                                            ;                                             ;
+; Total Number of Removed Registers = 108                                           ;                                             ;
 +-----------------------------------------------------------------------------------+---------------------------------------------+
 
 
@@ -348,12 +364,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 115   ;
+; Total registers                              ; 99    ;
 ; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 8     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 105   ;
+; Number of registers using Clock Enable       ; 89    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -363,10 +379,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
-; 3:1                ; 27 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |Clock|divisorGenerico_e_Interface:interfaceBaseTempo|contador[4]                ;
+; 3:1                ; 27 bits   ; 54 LEs        ; 0 LEs                ; 54 LEs                 ; Yes        ; |Clock|divisorGenerico_e_Interface:interfaceBaseTempo|contador[15]               ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |Clock|processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[7]               ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Clock|processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[6]               ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Clock|processador:processador|ULA:ULA|saida[0]                                  ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |Clock|processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[1]               ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |Clock|processador:processador|ULA:ULA|saida[6]                                  ;
 ; 13:1               ; 4 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |Clock|interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex0|rascSaida7seg[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------+
 
@@ -572,28 +588,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 115                         ;
-;     ENA               ; 78                          ;
+; arriav_ff             ; 99                          ;
+;     ENA               ; 62                          ;
 ;     ENA SCLR          ; 27                          ;
 ;     SLD               ; 8                           ;
 ;     plain             ; 2                           ;
 ; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 177                         ;
+; arriav_lcell_comb     ; 175                         ;
 ;     arith             ; 44                          ;
 ;         1 data inputs ; 36                          ;
 ;         5 data inputs ; 8                           ;
-;     normal            ; 133                         ;
+;     normal            ; 131                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 15                          ;
-;         4 data inputs ; 33                          ;
-;         5 data inputs ; 30                          ;
-;         6 data inputs ; 39                          ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 20                          ;
+;         4 data inputs ; 23                          ;
+;         5 data inputs ; 35                          ;
+;         6 data inputs ; 33                          ;
 ; boundary_port         ; 112                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.70                        ;
-; Average LUT depth     ; 4.31                        ;
+; Max LUT depth         ; 7.50                        ;
+; Average LUT depth     ; 4.26                        ;
 +-----------------------+-----------------------------+
 
 
@@ -612,158 +628,166 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 19 02:02:26 2020
+    Info: Processing started: Mon Oct 19 11:58:49 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Clock -c Clock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file clock.vhd
-    Info (12022): Found design unit 1: Clock-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 35
-    Info (12023): Found entity 1: Clock File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file muxgenerico2x1.vhd
-    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/muxGenerico2x1.vhd Line: 25
-    Info (12023): Found entity 1: muxGenerico2x1 File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/muxGenerico2x1.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file ula.vhd
-    Info (12022): Found design unit 1: ULA-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/ULA.vhd Line: 27
-    Info (12023): Found entity 1: ULA File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/ULA.vhd Line: 7
-Info (12021): Found 3 design units, including 1 entities, in source file edgedetector.vhd
-    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/edgeDetector.vhd Line: 20
-    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/edgeDetector.vhd Line: 39
-    Info (12023): Found entity 1: edgeDetector File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/edgeDetector.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file registradorgenerico.vhd
-    Info (12022): Found design unit 1: registradorGenerico-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/registradorGenerico.vhd Line: 26
-    Info (12023): Found entity 1: registradorGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/registradorGenerico.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file bancoregistradoresarqregreg.vhd
-    Info (12022): Found design unit 1: bancoRegistradoresArqRegReg-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/bancoRegistradoresArqRegReg.vhd Line: 33
-    Info (12023): Found entity 1: bancoRegistradoresArqRegReg File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/bancoRegistradoresArqRegReg.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file memoriarom.vhd
-    Info (12022): Found design unit 1: memoriaROM-assincrona File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaROM.vhd Line: 26
-    Info (12023): Found entity 1: memoriaROM File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaROM.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file memoriaram.vhd
-    Info (12022): Found design unit 1: memoriaRAM-rtl File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 30
-    Info (12023): Found entity 1: memoriaRAM File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico.vhd
-    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico.vhd Line: 27
-    Info (12023): Found entity 1: divisorGenerico File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file unidadecontrole.vhd
-    Info (12022): Found design unit 1: unidadeControle-main File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/UnidadeControle.vhd Line: 26
-    Info (12023): Found entity 1: UnidadeControle File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/UnidadeControle.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file Clock.vhd
+    Info (12022): Found design unit 1: Clock-arch_name File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 35
+    Info (12023): Found entity 1: Clock File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file muxGenerico2x1.vhd
+    Info (12022): Found design unit 1: muxGenerico2x1-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/muxGenerico2x1.vhd Line: 25
+    Info (12023): Found entity 1: muxGenerico2x1 File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/muxGenerico2x1.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ULA.vhd
+    Info (12022): Found design unit 1: ULA-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/ULA.vhd Line: 27
+    Info (12023): Found entity 1: ULA File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/ULA.vhd Line: 7
+Info (12021): Found 3 design units, including 1 entities, in source file edgeDetector.vhd
+    Info (12022): Found design unit 1: edgeDetector-bordaSubida File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/edgeDetector.vhd Line: 20
+    Info (12022): Found design unit 2: edgeDetector-bordaDescida File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/edgeDetector.vhd Line: 39
+    Info (12023): Found entity 1: edgeDetector File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/edgeDetector.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registradorGenerico.vhd
+    Info (12022): Found design unit 1: registradorGenerico-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/registradorGenerico.vhd Line: 26
+    Info (12023): Found entity 1: registradorGenerico File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/registradorGenerico.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file bancoRegistradoresArqRegReg.vhd
+    Info (12022): Found design unit 1: bancoRegistradoresArqRegReg-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/bancoRegistradoresArqRegReg.vhd Line: 33
+    Info (12023): Found entity 1: bancoRegistradoresArqRegReg File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/bancoRegistradoresArqRegReg.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaROM.vhd
+    Info (12022): Found design unit 1: memoriaROM-assincrona File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaROM.vhd Line: 26
+    Info (12023): Found entity 1: memoriaROM File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaROM.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file memoriaRAM.vhd
+    Info (12022): Found design unit 1: memoriaRAM-rtl File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 30
+    Info (12023): Found entity 1: memoriaRAM File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file divisorGenerico.vhd
+    Info (12022): Found design unit 1: divisorGenerico-divInteiro File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico.vhd Line: 27
+    Info (12023): Found entity 1: divisorGenerico File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file UnidadeControle.vhd
+    Info (12022): Found design unit 1: unidadeControle-main File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/UnidadeControle.vhd Line: 26
+    Info (12023): Found entity 1: UnidadeControle File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/UnidadeControle.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file decodificador2x4.vhd
-    Info (12022): Found design unit 1: decodificador2x4-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/decodificador2x4.vhd Line: 21
-    Info (12023): Found entity 1: decodificador2x4 File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/decodificador2x4.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file somaconstante.vhd
-    Info (12022): Found design unit 1: somaConstante-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/somaConstante.vhd Line: 26
-    Info (12023): Found entity 1: somaConstante File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/somaConstante.vhd Line: 7
-Info (12021): Found 2 design units, including 1 entities, in source file processador.vhd
-    Info (12022): Found design unit 1: processador-arch_name File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 37
-    Info (12023): Found entity 1: processador File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file interfacechaves.vhd
-    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 16
-    Info (12023): Found entity 1: interfaceCHAVES File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file interfaceleds.vhd
-    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceLEDs.vhd Line: 16
-    Info (12023): Found entity 1: interfaceLEDs File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceLEDs.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file interfacebotoes.vhd
-    Info (12022): Found design unit 1: interfaceBOTOES-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceBOTOES.vhd Line: 17
-    Info (12023): Found entity 1: interfaceBOTOES File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceBOTOES.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file conversorhex7seg.vhd
-    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/conversorHex7Seg.vhd Line: 17
-    Info (12023): Found entity 1: conversorHex7Seg File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/conversorHex7Seg.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file divisorgenerico_e_interface.vhd
-    Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 18
-    Info (12023): Found entity 1: divisorGenerico_e_Interface File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 5
-Info (12021): Found 2 design units, including 1 entities, in source file interfacehex.vhd
-    Info (12022): Found design unit 1: interfaceHEX-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceHEX.vhd Line: 19
-    Info (12023): Found entity 1: interfaceHEX File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceHEX.vhd Line: 5
+    Info (12022): Found design unit 1: decodificador2x4-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/decodificador2x4.vhd Line: 21
+    Info (12023): Found entity 1: decodificador2x4 File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/decodificador2x4.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file somaConstante.vhd
+    Info (12022): Found design unit 1: somaConstante-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/somaConstante.vhd Line: 26
+    Info (12023): Found entity 1: somaConstante File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/somaConstante.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file Processador.vhd
+    Info (12022): Found design unit 1: processador-arch_name File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 37
+    Info (12023): Found entity 1: processador File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceCHAVES.vhd
+    Info (12022): Found design unit 1: interfaceCHAVES-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 16
+    Info (12023): Found entity 1: interfaceCHAVES File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceLEDs.vhd
+    Info (12022): Found design unit 1: interfaceLEDs-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceLEDs.vhd Line: 16
+    Info (12023): Found entity 1: interfaceLEDs File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceLEDs.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceBOTOES.vhd
+    Info (12022): Found design unit 1: interfaceBOTOES-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceBOTOES.vhd Line: 17
+    Info (12023): Found entity 1: interfaceBOTOES File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceBOTOES.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file conversorHex7Seg.vhd
+    Info (12022): Found design unit 1: conversorHex7Seg-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/conversorHex7Seg.vhd Line: 17
+    Info (12023): Found entity 1: conversorHex7Seg File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/conversorHex7Seg.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file divisorGenerico_e_Interface.vhd
+    Info (12022): Found design unit 1: divisorGenerico_e_Interface-interface File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 18
+    Info (12023): Found entity 1: divisorGenerico_e_Interface File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 5
+Info (12021): Found 2 design units, including 1 entities, in source file interfaceHEX.vhd
+    Info (12022): Found design unit 1: interfaceHEX-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceHEX.vhd Line: 19
+    Info (12023): Found entity 1: interfaceHEX File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceHEX.vhd Line: 5
 Info (12021): Found 0 design units, including 0 entities, in source file main.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file flipflop.vhd
-    Info (12022): Found design unit 1: flipflop-comportamento File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/flipflop.vhd Line: 21
-    Info (12023): Found entity 1: flipflop File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/flipflop.vhd Line: 6
-Info (12021): Found 0 design units, including 0 entities, in source file basedetempo.vhd
+    Info (12022): Found design unit 1: flipflop-comportamento File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/flipflop.vhd Line: 21
+    Info (12023): Found entity 1: flipflop File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/flipflop.vhd Line: 6
+Info (12021): Found 0 design units, including 0 entities, in source file baseDeTempo.vhd
 Info (12127): Elaborating entity "Clock" for the top level hierarchy
-Info (12128): Elaborating entity "processador" for hierarchy "processador:processador" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 89
-Info (12128): Elaborating entity "UnidadeControle" for hierarchy "processador:processador|UnidadeControle:UC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 69
-Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:processador|memoriaROM:ROM" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 77
-Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:processador|registradorGenerico:PC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 83
-Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:processador|somaConstante:inc" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 92
-Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:MUX_PC" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 98
-Info (12128): Elaborating entity "bancoRegistradoresArqRegReg" for hierarchy "processador:processador|bancoRegistradoresArqRegReg:Registradores" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 116
-Info (12128): Elaborating entity "ULA" for hierarchy "processador:processador|ULA:ULA" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 132
-Info (12128): Elaborating entity "flipflop" for hierarchy "processador:processador|flipflop:flipflop" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Processador.vhd Line: 144
-Info (12128): Elaborating entity "decodificador2x4" for hierarchy "decodificador2x4:Decoder" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 102
-Warning (10873): Using initial value X (don't care) for net "habilita[7..3]" at decodificador2x4.vhd(13) File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/decodificador2x4.vhd Line: 13
-Warning (10873): Using initial value X (don't care) for net "numSeletor[8]" at decodificador2x4.vhd(24) File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/decodificador2x4.vhd Line: 24
-Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 112
-Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:interfaceChaves" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 124
-Warning (10873): Using initial value X (don't care) for net "sinal[7..1]" at interfaceCHAVES.vhd(17) File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 17
-Info (12128): Elaborating entity "interfaceBOTOES" for hierarchy "interfaceBOTOES:interfaceBtn" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 135
-Warning (10873): Using initial value X (don't care) for net "sinal[7..1]" at interfaceBOTOES.vhd(19) File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceBOTOES.vhd Line: 19
-Info (12128): Elaborating entity "interfaceHEX" for hierarchy "interfaceHEX:interfaceHEX" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 147
-Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex0" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceHEX.vhd Line: 37
-Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 190
-Warning (10540): VHDL Signal Declaration warning at divisorGenerico_e_Interface.vhd(25): used explicit default value for signal "clock_slow" because signal was never assigned a value File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 25
-Warning (10540): VHDL Signal Declaration warning at divisorGenerico_e_Interface.vhd(26): used explicit default value for signal "clock_fast" because signal was never assigned a value File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 26
+Info (12128): Elaborating entity "processador" for hierarchy "processador:processador" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 89
+Info (12128): Elaborating entity "UnidadeControle" for hierarchy "processador:processador|UnidadeControle:UC" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 69
+Info (12128): Elaborating entity "memoriaROM" for hierarchy "processador:processador|memoriaROM:ROM" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 77
+Info (12128): Elaborating entity "registradorGenerico" for hierarchy "processador:processador|registradorGenerico:PC" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 83
+Info (12128): Elaborating entity "somaConstante" for hierarchy "processador:processador|somaConstante:inc" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 92
+Info (12128): Elaborating entity "muxGenerico2x1" for hierarchy "processador:processador|muxGenerico2x1:MUX_PC" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 98
+Info (12128): Elaborating entity "bancoRegistradoresArqRegReg" for hierarchy "processador:processador|bancoRegistradoresArqRegReg:Registradores" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 116
+Info (12128): Elaborating entity "ULA" for hierarchy "processador:processador|ULA:ULA" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 132
+Info (12128): Elaborating entity "flipflop" for hierarchy "processador:processador|flipflop:flipflop" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Processador.vhd Line: 144
+Info (12128): Elaborating entity "decodificador2x4" for hierarchy "decodificador2x4:Decoder" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 102
+Warning (10873): Using initial value X (don't care) for net "habilita[7..3]" at decodificador2x4.vhd(13) File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/decodificador2x4.vhd Line: 13
+Warning (10873): Using initial value X (don't care) for net "numSeletor[8]" at decodificador2x4.vhd(24) File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/decodificador2x4.vhd Line: 24
+Info (12128): Elaborating entity "memoriaRAM" for hierarchy "memoriaRAM:RAM" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 112
+Info (12128): Elaborating entity "interfaceCHAVES" for hierarchy "interfaceCHAVES:interfaceChaves" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 124
+Warning (10873): Using initial value X (don't care) for net "sinal[7..1]" at interfaceCHAVES.vhd(17) File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 17
+Info (12128): Elaborating entity "interfaceBOTOES" for hierarchy "interfaceBOTOES:interfaceBtn" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 135
+Warning (10873): Using initial value X (don't care) for net "sinal[7..1]" at interfaceBOTOES.vhd(19) File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceBOTOES.vhd Line: 19
+Info (12128): Elaborating entity "interfaceHEX" for hierarchy "interfaceHEX:interfaceHEX" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 147
+Info (12128): Elaborating entity "conversorHex7Seg" for hierarchy "interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex0" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceHEX.vhd Line: 37
+Info (12128): Elaborating entity "divisorGenerico_e_Interface" for hierarchy "divisorGenerico_e_Interface:interfaceBaseTempo" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 190
+Warning (10540): VHDL Signal Declaration warning at divisorGenerico_e_Interface.vhd(25): used explicit default value for signal "clock_slow" because signal was never assigned a value File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 25
+Warning (10540): VHDL Signal Declaration warning at divisorGenerico_e_Interface.vhd(26): used explicit default value for signal "clock_fast" because signal was never assigned a value File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/divisorGenerico_e_Interface.vhd Line: 26
 Info (276014): Found 2 instances of uninferred RAM logic
-    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 37
-    Info (276007): RAM logic "processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador" is uninferred due to asynchronous read logic File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/bancoRegistradoresArqRegReg.vhd Line: 40
+    Info (276007): RAM logic "memoriaRAM:RAM|ram" is uninferred due to asynchronous read logic File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 37
+    Info (276007): RAM logic "processador:processador|bancoRegistradoresArqRegReg:Registradores|registrador" is uninferred due to asynchronous read logic File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/bancoRegistradoresArqRegReg.vhd Line: 40
 Warning (13027): Removed fan-outs from the following always-disabled I/O buffers
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[0]" to the node "BarramentoEntrada_t[0]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[1]" to the node "BarramentoEntrada_t[1]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[2]" to the node "BarramentoEntrada_t[2]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[3]" to the node "BarramentoEntrada_t[3]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[4]" to the node "BarramentoEntrada_t[4]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[5]" to the node "BarramentoEntrada_t[5]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[6]" to the node "BarramentoEntrada_t[6]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
-    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[7]" to the node "BarramentoEntrada_t[7]" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[0]" to the node "BarramentoEntrada_t[0]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[1]" to the node "BarramentoEntrada_t[1]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[2]" to the node "BarramentoEntrada_t[2]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[3]" to the node "BarramentoEntrada_t[3]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[4]" to the node "BarramentoEntrada_t[4]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[5]" to the node "BarramentoEntrada_t[5]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[6]" to the node "BarramentoEntrada_t[6]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
+    Warning (13028): Removed fan-out from the always-disabled I/O buffer "memoriaRAM:RAM|dado_out[7]" to the node "BarramentoEntrada_t[7]" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/memoriaRAM.vhd Line: 24
 Warning (13050): Open-drain buffer(s) that do not directly drive top-level pin(s) are removed
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[1]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[1]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[2]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[2]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[3]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[3]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[4]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[4]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[5]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[5]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[6]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[6]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
-    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[7]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[7]" into a wire File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[1]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[1]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[2]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[2]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[3]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[3]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[4]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[4]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[5]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[5]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[6]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[6]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13051): Converted the fanout from the open-drain buffer "interfaceCHAVES:interfaceChaves|saida[7]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[7]" into a wire File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
 Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
-    Warning (13047): Converted the fan-out from the tri-state buffer "interfaceCHAVES:interfaceChaves|saida[0]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[0]" into an OR gate File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/interfaceCHAVES.vhd Line: 12
+    Warning (13047): Converted the fan-out from the tri-state buffer "interfaceCHAVES:interfaceChaves|saida[0]" to the node "processador:processador|muxGenerico2x1:MUX_ULA|saida_MUX[0]" into an OR gate File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/interfaceCHAVES.vhd Line: 12
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX3[0]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX3[1]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX3[2]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX3[3]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX3[4]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX3[5]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX3[6]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[0]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[1]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[2]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[3]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[4]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[5]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "HEX5[6]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 16
-    Warning (13410): Pin "habilita_t[2]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 17
-    Warning (13410): Pin "habilita_t[3]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 17
-    Warning (13410): Pin "habilita_t[4]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 17
-    Warning (13410): Pin "habilita_t[5]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 17
-    Warning (13410): Pin "habilita_t[6]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 17
-    Warning (13410): Pin "habilita_t[7]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 17
-    Warning (13410): Pin "habilitahex_t[3]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 18
-    Warning (13410): Pin "habilitahex_t[5]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 18
-    Warning (13410): Pin "enderecoRAMROM_DEBUG[4]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 20
-    Warning (13410): Pin "enderecoRAMROM_DEBUG[5]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 20
-    Warning (13410): Pin "enderecoRAMROM_DEBUG[7]" is stuck at GND File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 20
+    Warning (13410): Pin "HEX3[0]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX3[1]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX3[2]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX3[3]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX3[4]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX3[5]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX3[6]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[0]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[1]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[2]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[3]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[4]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[5]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX4[6]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[0]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[1]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[2]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[3]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[4]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[5]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "HEX5[6]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 16
+    Warning (13410): Pin "habilita_t[2]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 17
+    Warning (13410): Pin "habilita_t[3]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 17
+    Warning (13410): Pin "habilita_t[4]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 17
+    Warning (13410): Pin "habilita_t[5]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 17
+    Warning (13410): Pin "habilita_t[6]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 17
+    Warning (13410): Pin "habilita_t[7]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 17
+    Warning (13410): Pin "habilitahex_t[3]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 18
+    Warning (13410): Pin "habilitahex_t[4]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 18
+    Warning (13410): Pin "habilitahex_t[5]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 18
+    Warning (13410): Pin "enderecoRAMROM_DEBUG[4]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 20
+    Warning (13410): Pin "enderecoRAMROM_DEBUG[5]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 20
+    Warning (13410): Pin "enderecoRAMROM_DEBUG[7]" is stuck at GND File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 32 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/Clock.vhd Line: 15
-Info (21057): Implemented 365 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 15
+Info (21057): Implemented 348 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 253 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 54 warnings
-    Info: Peak virtual memory: 4854 megabytes
-    Info: Processing ended: Mon Oct 19 02:02:46 2020
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:35
+    Info (21061): Implemented 236 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 514 megabytes
+    Info: Processing ended: Mon Oct 19 11:59:02 2020
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:17
 
 
