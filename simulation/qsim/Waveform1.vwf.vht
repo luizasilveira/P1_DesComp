@@ -19,7 +19,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/16/2020 14:52:38"
+-- Generated on "10/18/2020 21:01:38"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          processador
 -- 
@@ -38,16 +38,28 @@ SIGNAL adress : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL dataIn : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL dataOut : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL habEscritaMEM : STD_LOGIC;
 SIGNAL habEscritaReg : STD_LOGIC;
 SIGNAL habLeituraMEM : STD_LOGIC;
+SIGNAL pinTest : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL pinTestA : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL pinTestB : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL pinTestflagZero : STD_LOGIC;
+SIGNAL pinTestSaidaULA : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT processador
 	PORT (
 	adress : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	dataIn : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
 	dataOut : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	habEscritaMEM : OUT STD_LOGIC;
 	habEscritaReg : OUT STD_LOGIC;
-	habLeituraMEM : OUT STD_LOGIC
+	habLeituraMEM : OUT STD_LOGIC;
+	pinTest : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	pinTestA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	pinTestB : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	pinTestflagZero : OUT STD_LOGIC;
+	pinTestSaidaULA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -58,8 +70,14 @@ BEGIN
 	clk => clk,
 	dataIn => dataIn,
 	dataOut => dataOut,
+	habEscritaMEM => habEscritaMEM,
 	habEscritaReg => habEscritaReg,
-	habLeituraMEM => habLeituraMEM
+	habLeituraMEM => habLeituraMEM,
+	pinTest => pinTest,
+	pinTestA => pinTestA,
+	pinTestB => pinTestB,
+	pinTestflagZero => pinTestflagZero,
+	pinTestSaidaULA => pinTestSaidaULA
 	);
 
 -- clk

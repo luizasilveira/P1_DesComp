@@ -84,7 +84,6 @@ architecture arch_name of Clock is
 				clk => CLOCK_50,
 				dataOut => BarramentoSaida,
 				adress  => adress,
-				opCode => instOpCode,
 				habEscritaMEM => habEscritaMEM,
 				habLeituraMEM => habLeituraMEM
 				);

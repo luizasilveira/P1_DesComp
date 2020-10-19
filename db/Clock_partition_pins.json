@@ -4,183 +4,231 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "HEX0[0]",
+					"name" : "dataOut[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[1]",
+					"name" : "dataOut[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[2]",
+					"name" : "dataOut[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[3]",
+					"name" : "dataOut[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[4]",
+					"name" : "dataOut[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[5]",
+					"name" : "dataOut[5]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX0[6]",
+					"name" : "dataOut[6]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[0]",
+					"name" : "dataOut[7]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[1]",
+					"name" : "adress[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[2]",
+					"name" : "adress[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[3]",
+					"name" : "adress[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[4]",
+					"name" : "adress[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[5]",
+					"name" : "adress[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX1[6]",
+					"name" : "habEscritaReg",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[0]",
+					"name" : "habEscritaMEM",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[1]",
+					"name" : "pinTest[0]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[2]",
+					"name" : "pinTest[1]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[3]",
+					"name" : "pinTest[2]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[4]",
+					"name" : "pinTest[3]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[5]",
+					"name" : "pinTest[4]",
 					"strict" : false
 				},
 				{
-					"name" : "HEX2[6]",
+					"name" : "pinTest[5]",
 					"strict" : false
 				},
 				{
-					"name" : "habilita_t[0]",
+					"name" : "pinTest[6]",
 					"strict" : false
 				},
 				{
-					"name" : "habilita_t[1]",
+					"name" : "pinTest[7]",
 					"strict" : false
 				},
 				{
-					"name" : "habilitahex_t[0]",
+					"name" : "pinTestA[0]",
 					"strict" : false
 				},
 				{
-					"name" : "habilitahex_t[1]",
+					"name" : "pinTestA[1]",
 					"strict" : false
 				},
 				{
-					"name" : "habilitahex_t[2]",
+					"name" : "pinTestA[2]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[0]",
+					"name" : "pinTestA[3]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[1]",
+					"name" : "pinTestA[4]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[2]",
+					"name" : "pinTestA[5]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[3]",
+					"name" : "pinTestA[6]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[4]",
+					"name" : "pinTestA[7]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[5]",
+					"name" : "pinTestB[0]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[6]",
+					"name" : "pinTestB[1]",
 					"strict" : false
 				},
 				{
-					"name" : "saidaDaodos_DEBUG[7]",
+					"name" : "pinTestB[2]",
 					"strict" : false
 				},
 				{
-					"name" : "enderecoRAMROM_DEBUG[0]",
+					"name" : "pinTestB[3]",
 					"strict" : false
 				},
 				{
-					"name" : "enderecoRAMROM_DEBUG[1]",
+					"name" : "pinTestB[4]",
 					"strict" : false
 				},
 				{
-					"name" : "enderecoRAMROM_DEBUG[2]",
+					"name" : "pinTestB[5]",
 					"strict" : false
 				},
 				{
-					"name" : "enderecoRAMROM_DEBUG[3]",
+					"name" : "pinTestB[6]",
 					"strict" : false
 				},
 				{
-					"name" : "enderecoRAMROM_DEBUG[6]",
+					"name" : "pinTestB[7]",
 					"strict" : false
 				},
 				{
-					"name" : "CLOCK_50",
+					"name" : "pinTestSaidaULA[0]",
 					"strict" : false
 				},
 				{
-					"name" : "KEY[3]",
+					"name" : "pinTestSaidaULA[1]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[0]",
+					"name" : "pinTestSaidaULA[2]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[1]",
+					"name" : "pinTestSaidaULA[3]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[2]",
+					"name" : "pinTestSaidaULA[4]",
 					"strict" : false
 				},
 				{
-					"name" : "SW[3]",
+					"name" : "pinTestSaidaULA[5]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[6]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestSaidaULA[7]",
+					"strict" : false
+				},
+				{
+					"name" : "pinTestflagZero",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[2]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[3]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[4]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[5]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[6]",
+					"strict" : false
+				},
+				{
+					"name" : "dataIn[7]",
 					"strict" : false
 				}
 			]

@@ -19,9 +19,9 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/16/2020 11:55:13"
+-- Generated on "10/18/2020 20:57:51"
                                                              
--- Vhdl Test Bench(with test vectors) for design  :          processador
+-- Vhdl Test Bench(with test vectors) for design  :          Clock
 -- 
 -- Simulation tool : 3rd Party
 -- 
@@ -29,54 +29,167 @@
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
-ENTITY processador_vhd_vec_tst IS
-END processador_vhd_vec_tst;
-ARCHITECTURE processador_arch OF processador_vhd_vec_tst IS
+ENTITY Clock_vhd_vec_tst IS
+END Clock_vhd_vec_tst;
+ARCHITECTURE Clock_arch OF Clock_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
-SIGNAL clk : STD_LOGIC;
-SIGNAL saida_pc : STD_LOGIC_VECTOR(7 DOWNTO 0);
-SIGNAL sel_mux : STD_LOGIC;
-COMPONENT processador
+SIGNAL CLOCK_50 : STD_LOGIC;
+SIGNAL enderecoRAMROM_DEBUG : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL FPGA_RESET_N : STD_LOGIC;
+SIGNAL habilita_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL habilitahex_t : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL HEX0 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX1 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX2 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX3 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX4 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL HEX5 : STD_LOGIC_VECTOR(6 DOWNTO 0);
+SIGNAL KEY : STD_LOGIC_VECTOR(3 DOWNTO 0);
+SIGNAL saidaDaodos_DEBUG : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL SW : STD_LOGIC_VECTOR(9 DOWNTO 0);
+COMPONENT Clock
 	PORT (
-	clk : IN STD_LOGIC;
-	saida_pc : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
-	sel_mux : IN STD_LOGIC
+	CLOCK_50 : IN STD_LOGIC;
+	enderecoRAMROM_DEBUG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	FPGA_RESET_N : IN STD_LOGIC;
+	habilita_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	habilitahex_t : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	HEX0 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX1 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX2 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX3 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX4 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	HEX5 : OUT STD_LOGIC_VECTOR(6 DOWNTO 0);
+	KEY : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+	saidaDaodos_DEBUG : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	SW : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
-	i1 : processador
+	i1 : Clock
 	PORT MAP (
 -- list connections between master ports and signals
-	clk => clk,
-	saida_pc => saida_pc,
-	sel_mux => sel_mux
+	CLOCK_50 => CLOCK_50,
+	enderecoRAMROM_DEBUG => enderecoRAMROM_DEBUG,
+	FPGA_RESET_N => FPGA_RESET_N,
+	habilita_t => habilita_t,
+	habilitahex_t => habilitahex_t,
+	HEX0 => HEX0,
+	HEX1 => HEX1,
+	HEX2 => HEX2,
+	HEX3 => HEX3,
+	HEX4 => HEX4,
+	HEX5 => HEX5,
+	KEY => KEY,
+	saidaDaodos_DEBUG => saidaDaodos_DEBUG,
+	SW => SW
 	);
 
--- clk
-t_prcs_clk: PROCESS
+-- CLOCK_50
+t_prcs_CLOCK_50: PROCESS
 BEGIN
 	FOR i IN 1 TO 16
 	LOOP
-		clk <= '0';
+		CLOCK_50 <= '0';
 		WAIT FOR 30000 ps;
-		clk <= '1';
+		CLOCK_50 <= '1';
 		WAIT FOR 30000 ps;
 	END LOOP;
-	clk <= '0';
+	CLOCK_50 <= '0';
 	WAIT FOR 30000 ps;
-	clk <= '1';
+	CLOCK_50 <= '1';
 WAIT;
-END PROCESS t_prcs_clk;
+END PROCESS t_prcs_CLOCK_50;
 
--- sel_mux
-t_prcs_sel_mux: PROCESS
+-- FPGA_RESET_N
+t_prcs_FPGA_RESET_N: PROCESS
 BEGIN
-	sel_mux <= '0';
-	WAIT FOR 140000 ps;
-	sel_mux <= '1';
-	WAIT FOR 50000 ps;
-	sel_mux <= '0';
+	FPGA_RESET_N <= '0';
 WAIT;
-END PROCESS t_prcs_sel_mux;
-END processador_arch;
+END PROCESS t_prcs_FPGA_RESET_N;
+-- KEY[3]
+t_prcs_KEY_3: PROCESS
+BEGIN
+	KEY(3) <= '0';
+WAIT;
+END PROCESS t_prcs_KEY_3;
+-- KEY[2]
+t_prcs_KEY_2: PROCESS
+BEGIN
+	KEY(2) <= '0';
+WAIT;
+END PROCESS t_prcs_KEY_2;
+-- KEY[1]
+t_prcs_KEY_1: PROCESS
+BEGIN
+	KEY(1) <= '0';
+WAIT;
+END PROCESS t_prcs_KEY_1;
+-- KEY[0]
+t_prcs_KEY_0: PROCESS
+BEGIN
+	KEY(0) <= '0';
+WAIT;
+END PROCESS t_prcs_KEY_0;
+-- SW[9]
+t_prcs_SW_9: PROCESS
+BEGIN
+	SW(9) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_9;
+-- SW[8]
+t_prcs_SW_8: PROCESS
+BEGIN
+	SW(8) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_8;
+-- SW[7]
+t_prcs_SW_7: PROCESS
+BEGIN
+	SW(7) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_7;
+-- SW[6]
+t_prcs_SW_6: PROCESS
+BEGIN
+	SW(6) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_6;
+-- SW[5]
+t_prcs_SW_5: PROCESS
+BEGIN
+	SW(5) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_5;
+-- SW[4]
+t_prcs_SW_4: PROCESS
+BEGIN
+	SW(4) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_4;
+-- SW[3]
+t_prcs_SW_3: PROCESS
+BEGIN
+	SW(3) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_3;
+-- SW[2]
+t_prcs_SW_2: PROCESS
+BEGIN
+	SW(2) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_2;
+-- SW[1]
+t_prcs_SW_1: PROCESS
+BEGIN
+	SW(1) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_1;
+-- SW[0]
+t_prcs_SW_0: PROCESS
+BEGIN
+	SW(0) <= '0';
+WAIT;
+END PROCESS t_prcs_SW_0;
+END Clock_arch;
