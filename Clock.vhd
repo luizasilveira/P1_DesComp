@@ -195,7 +195,7 @@ architecture arch_name of Clock is
             clk              => CLOCK_50,
             habilitaLeitura  => habBaseTempo,
             limpaLeitura     => LimpaBaseTempo,
-				seletorClk => '0',
+				seletorClk => '1',
             leituraUmSegundo => BarramentoEntrada
         );	
 	

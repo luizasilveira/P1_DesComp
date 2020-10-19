@@ -1,7 +1,7 @@
 # do Clock.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:50:09 on Oct 19,2020
+# Start time: 12:43:41 on Oct 19,2020
 # vcom -work work Clock.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -15,20 +15,20 @@
 # -- Loading package cyclonev_components
 # -- Compiling entity Clock
 # -- Compiling architecture structure of Clock
-# End time: 10:50:09 on Oct 19,2020, Elapsed time: 0:00:00
+# End time: 12:43:41 on Oct 19,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 10:50:09 on Oct 19,2020
+# Start time: 12:43:41 on Oct 19,2020
 # vcom -work work Waveform.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Clock_vhd_vec_tst
 # -- Compiling architecture Clock_arch of Clock_vhd_vec_tst
-# End time: 10:50:09 on Oct 19,2020, Elapsed time: 0:00:00
+# End time: 12:43:41 on Oct 19,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Clock_vhd_vec_tst 
-# Start time: 10:50:09 on Oct 19,2020
+# Start time: 12:43:41 on Oct 19,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -47,8 +47,58 @@
 # Loading cyclonev.cyclonev_clkena(behavior)
 # Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
 # Loading altera.dffeas(vital_dffeas)
-# ** Warning: Design size of 66456 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
+# ** Warning: Design size of 97316 statements exceeds ModelSim-Intel FPGA Starter Edition recommended capacity.
 # Expect performance to be adversely affected.
 # after#34
-# End time: 10:50:10 on Oct 19,2020, Elapsed time: 0:00:01
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 72500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 1686500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 3232500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 4849500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 6397500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 8030500 ps
+# Simulation time: 9659500 ps
+# Simulation time: 9659500 ps
+# End time: 12:45:47 on Oct 19,2020, Elapsed time: 0:02:06
 # Errors: 0, Warnings: 1
