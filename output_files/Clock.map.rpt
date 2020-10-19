@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Clock
-Mon Oct 19 16:12:48 2020
+Mon Oct 19 17:17:40 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -64,7 +64,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Oct 19 16:12:48 2020       ;
+; Analysis & Synthesis Status     ; Successful - Mon Oct 19 17:17:40 2020       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; Clock                                       ;
 ; Top-level Entity Name           ; Clock                                       ;
@@ -218,14 +218,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 160            ;
+; Estimate of Logic utilization (ALMs needed) ; 161            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 225            ;
+; Combinational ALUT usage for logic          ; 228            ;
 ;     -- 7 input functions                    ; 8              ;
 ;     -- 6 input functions                    ; 67             ;
-;     -- 5 input functions                    ; 46             ;
-;     -- 4 input functions                    ; 24             ;
-;     -- <=3 input functions                  ; 80             ;
+;     -- 5 input functions                    ; 45             ;
+;     -- 4 input functions                    ; 30             ;
+;     -- <=3 input functions                  ; 78             ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 175            ;
 ;                                             ;                ;
@@ -235,7 +235,7 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 175            ;
-; Total fan-out                               ; 1738           ;
+; Total fan-out                               ; 1752           ;
 ; Average fan-out                             ; 2.79           ;
 +---------------------------------------------+----------------+
 
@@ -245,7 +245,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-----------------------------+--------------+
 ; Compilation Hierarchy Node                          ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                      ; Entity Name                 ; Library Name ;
 +-----------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------+-----------------------------+--------------+
-; |Clock                                              ; 225 (1)             ; 175 (0)                   ; 0                 ; 0          ; 112  ; 0            ; |Clock                                                                   ; Clock                       ; work         ;
+; |Clock                                              ; 228 (1)             ; 175 (0)                   ; 0                 ; 0          ; 112  ; 0            ; |Clock                                                                   ; Clock                       ; work         ;
 ;    |decodificador2x4:Decoder|                       ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|decodificador2x4:Decoder                                          ; decodificador2x4            ; work         ;
 ;    |divisorGenerico_e_Interface:interfaceBaseTempo| ; 33 (33)             ; 28 (28)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|divisorGenerico_e_Interface:interfaceBaseTempo                    ; divisorGenerico_e_Interface ; work         ;
 ;    |interfaceBOTOES:interfaceBtn|                   ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceBOTOES:interfaceBtn                                      ; interfaceBOTOES             ; work         ;
@@ -257,12 +257,12 @@ https://fpgasoftware.intel.com/eula.
 ;       |conversorHex7Seg:conversorHex3|              ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex3          ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:conversorHex4|              ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex4          ; conversorHex7Seg            ; work         ;
 ;       |conversorHex7Seg:conversorHex5|              ; 0 (0)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|interfaceHEX:interfaceHEX|conversorHex7Seg:conversorHex5          ; conversorHex7Seg            ; work         ;
-;    |processador:processador|                        ; 159 (1)             ; 105 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador                                           ; processador                 ; work         ;
+;    |processador:processador|                        ; 162 (1)             ; 105 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador                                           ; processador                 ; work         ;
 ;       |ULA:ULA|                                     ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|ULA:ULA                                   ; ULA                         ; work         ;
 ;       |UnidadeControle:UC|                          ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|UnidadeControle:UC                        ; UnidadeControle             ; work         ;
 ;       |bancoRegistradoresArqRegReg:Registradores|   ; 69 (69)             ; 96 (96)                   ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|bancoRegistradoresArqRegReg:Registradores ; bancoRegistradoresArqRegReg ; work         ;
 ;       |flipflop:flipflop|                           ; 5 (5)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|flipflop:flipflop                         ; flipflop                    ; work         ;
-;       |memoriaROM:ROM|                              ; 46 (46)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|memoriaROM:ROM                            ; memoriaROM                  ; work         ;
+;       |memoriaROM:ROM|                              ; 49 (49)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|memoriaROM:ROM                            ; memoriaROM                  ; work         ;
 ;       |muxGenerico2x1:MUX_ULA|                      ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|muxGenerico2x1:MUX_ULA                    ; muxGenerico2x1              ; work         ;
 ;       |registradorGenerico:PC|                      ; 0 (0)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|registradorGenerico:PC                    ; registradorGenerico         ; work         ;
 ;       |somaConstante:inc|                           ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Clock|processador:processador|somaConstante:inc                         ; somaConstante               ; work         ;
@@ -545,24 +545,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SLD               ; 8                           ;
 ;     plain             ; 2                           ;
 ; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 227                         ;
+; arriav_lcell_comb     ; 230                         ;
 ;     arith             ; 44                          ;
 ;         1 data inputs ; 36                          ;
 ;         3 data inputs ; 8                           ;
 ;     extend            ; 8                           ;
 ;         7 data inputs ; 8                           ;
-;     normal            ; 175                         ;
+;     normal            ; 178                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 2                           ;
-;         2 data inputs ; 12                          ;
-;         3 data inputs ; 23                          ;
-;         4 data inputs ; 24                          ;
-;         5 data inputs ; 46                          ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 22                          ;
+;         4 data inputs ; 30                          ;
+;         5 data inputs ; 45                          ;
 ;         6 data inputs ; 67                          ;
 ; boundary_port         ; 112                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 8.70                        ;
-; Average LUT depth     ; 4.59                        ;
+; Max LUT depth         ; 7.70                        ;
+; Average LUT depth     ; 4.45                        ;
 +-----------------------+-----------------------------+
 
 
@@ -571,7 +571,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -581,7 +581,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 19 16:12:27 2020
+    Info: Processing started: Mon Oct 19 17:17:22 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Clock -c Clock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -706,14 +706,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "FPGA_RESET_N" File: /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/Clock.vhd Line: 15
-Info (21057): Implemented 476 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 479 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 16 input pins
     Info (21059): Implemented 96 output pins
-    Info (21061): Implemented 364 logic cells
+    Info (21061): Implemented 367 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 36 warnings
-    Info: Peak virtual memory: 511 megabytes
-    Info: Processing ended: Mon Oct 19 16:12:48 2020
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Peak virtual memory: 513 megabytes
+    Info: Processing ended: Mon Oct 19 17:17:40 2020
+    Info: Elapsed time: 00:00:18
+    Info: Total CPU time (on all processors): 00:00:27
 
 

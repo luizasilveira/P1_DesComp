@@ -23,7 +23,7 @@ ARCHITECTURE interface OF divisorGenerico_e_Interface IS
 
     -- Quantos clocks devemos esperar.
     signal clock_slow : NATURAL := 50000000;
-    signal clock_fast : NATURAL := 1000000;
+    signal clock_fast : NATURAL := 100000; --250000; --1000000;
     SIGNAL num_clocks : NATURAL;
    
 BEGIN
