@@ -1,3 +1,5 @@
+-- referências: modelo VHDL baseado no https://github.com/HenryRocha/computer-design-clock 
+
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
@@ -10,38 +12,35 @@ ENTITY divisorGenerico_e_Interface IS
         clk              : IN std_logic;
         habilitaLeitura  : IN std_logic;
         limpaLeitura     : IN std_logic;
-		  seletorClk		 : IN std_logic;
+		  sel        		 : IN std_logic;
         leituraUmSegundo : OUT std_logic_vector(dataWidth - 1 DOWNTO 0)
     );
 END ENTITY;
 
 ARCHITECTURE interface OF divisorGenerico_e_Interface IS
     SIGNAL passouUmSegundo : std_logic := '0';
-
-    -- Contador de clocks, usado para verificar se passou o tempo certo.
-    SIGNAL contador : INTEGER RANGE 0 TO 100000000 := 0;
-
-    -- Quantos clocks devemos esperar.
-    signal clock_slow : NATURAL := 50000000;
-    signal clock_fast : NATURAL := 100000; --250000; --1000000;
-    SIGNAL num_clocks : NATURAL;
+    SIGNAL count : INTEGER RANGE 0 TO 100000000 := 0;
+    signal clockNormal : NATURAL := 50000000;
+    signal clockAcelerado : NATURAL := 100000; --250000; --1000000;
+    SIGNAL clock_utilizado : NATURAL;
    
 BEGIN
-    num_clocks <= clock_fast WHEN seletorClk = '1' ELSE clock_slow;
+    clock_utilizado <= clockAcelerado WHEN sel = '1' ELSE clockNormal;
     PROCESS (clk)
     BEGIN
         IF rising_edge(clk) THEN
             IF (limpaLeitura = '1') THEN
-                contador        <= 0;
+                count        <= 0;
                 passouUmSegundo <= '0';
-            ELSIF contador >= num_clocks THEN
+            ELSIF count >= clock_utilizado THEN
                 passouUmSegundo <= '1';
             ELSE
-                contador        <= contador + 1;
+                count        <= count + 1;
                 passouUmSegundo <= '0';
             END IF;
         END IF;
     END PROCESS;
+	 
 
     -- Mudamos apenas o primeiro bit da sa�da, retirando a necessidade de um
     -- extensor de sinal no fluxo de dados.
