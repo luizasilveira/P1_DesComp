@@ -57,9 +57,10 @@ architecture comportamento of ULA is
 						 op_and when    (seletor = "110") else
 						 op_or when     (seletor = "111") else
 						 entradaA;      -- outra opcao: saida = entradaA
-
+		
 		saida <= saida_ULA;
 		
+		-- ativa a flagZero quando o valor de saída da ULA for igual a 0
       flagZero <= '1' when unsigned(saida_ULA) = unsigned(zero) else '0';
 
 end architecture;

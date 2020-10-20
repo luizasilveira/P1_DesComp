@@ -4,13 +4,6 @@ use ieee.numeric_std.all;
 
 entity processador is
 
---	generic (
---		 enderecoWidth: natural := 12;
---		 dadosWidth: natural := 8;
---       -- Utilizar o que for maior entre: dadosWidth e enderecoWidth e somar com a quantidade de sinais de controle:
---       dataROMWidth: natural := 8 + 7
---   );
-
   port (
 		-- portas de entrada (placa)
 		clk: in std_logic;
@@ -23,12 +16,12 @@ entity processador is
 		habEscritaMEM: out std_logic;
 		habLeituraMEM: out std_logic;
 		
-		pinTest : out std_logic_vector(7 downto 0);
-		pinTestA : out std_logic_vector(7 downto 0);
-		pinTestB : out std_logic_vector(7 downto 0);
-		pinTestSaidaULA : out std_logic_vector(7 downto 0);
-		pinTestflagZero : out std_logic;
-		pinOpcode : out std_logic_vector(3 downto 0)
+--		pinTest : out std_logic_vector(7 downto 0);
+--		pinTestA : out std_logic_vector(7 downto 0);
+--		pinTestB : out std_logic_vector(7 downto 0);
+--		pinTestSaidaULA : out std_logic_vector(7 downto 0);
+--		pinTestflagZero : out std_logic;
+--		pinOpcode : out std_logic_vector(3 downto 0)
 	);
  
 end entity;
@@ -36,18 +29,18 @@ end entity;
 
 architecture arch_name of processador is
 
-	-- declara os sinais do processadot
-	signal PC_Out, MUX_ProxPC_Out, Inc_Out,
-			 ULA_Out, MUX_Imed_Out : std_logic_vector (7 DOWNTO 0);		 
+	-- declara os sinais do processador
 	signal flagZero, flipflop_Out: std_logic;
-	signal escritaRC, ULAentradaA,
-			 ULAentradaB           : std_logic_vector (7 DOWNTO 0);
+	signal PC_Out, Inc_Out,
+			 MUX_Imed_Out,
+			 MUX_ProxPC_Out,
+			 ULA_Out,
+			 ULAentradaA, 
+			 ULAentradaB, 
+			 escritaRC				  : std_logic_vector (7 DOWNTO 0);
 	signal Instrucao             : std_logic_vector(23 DOWNTO 0);
 	signal palavraControle       : std_logic_vector(10 DOWNTO 0);
---
---	signal sel_mux_ProxPC, sel_mux_ula,
---			 sel_muxImed, habEscritaReg,habLeituraMEM,	
---			 habEscritaMEM	        : std_logic;
+
 
 	-- declara novas variáveis para instanciar partes do vetor de instrução
 	alias opCode                 : std_logic_vector(23 downto 20) is Instrucao(23 downto 20); -- opcode [20-23]
@@ -57,15 +50,8 @@ architecture arch_name of processador is
 	alias imediatoValor          : std_logic_vector(7 DOWNTO 0) is Instrucao(7 downto 0);     -- imed   [0 - 7]
 
 	begin
-
--- Para instanciar, a atribuição de sinais (e generics) segue a ordem: (nomeSinalArquivoDefinicaoComponente => nomeSinalNesteArquivo)
--- regA:  entity work.nome_do_componente generic map (DATA_WIDTH => DATA_WIDTH)
---        port map (dataIN => dataIN, dataOUT =>  RegAmuxA, enable =>  habRegA, clk =>  clk, rst => rst);
-  
---  ALIAS jump           : std_logic IS palavraControle(9);
---	 ALIAS jmpCompare     : std_logic IS palavraControle(8);
-
-	-- 
+	
+	-- unidade de controle
 	UC: entity work.UnidadeControle
           port map (
 					clk => clk,
@@ -73,13 +59,15 @@ architecture arch_name of processador is
 					flagZero  => flagZero,
 					palavraControle => palavraControle
 			 );
-				
+	
+	-- ROM	
 	ROM: entity work.memoriaROM generic map (dataWidth => 24, addrWidth => 8 )
            port map (
 					Endereco => PC_Out,
 					Dado => Instrucao
 			  );
-				
+		
+	-- program counter
 	PC: entity work.registradorGenerico
           port map (
 					clk => clk,
@@ -88,13 +76,15 @@ architecture arch_name of processador is
 					ENABLE => '1',
 					RST => '0'
 			 );
-				
+			
+	-- incrementa 1		
 	inc: entity work.somaConstante
             port map (
 					entrada => PC_Out,
 					saida => Inc_Out
 				);
-				
+			
+	-- mux do program counter	
 	MUX_PC: entity work.muxGenerico2x1
 					port map (
 						entradaA_MUX => Inc_Out,
@@ -104,7 +94,7 @@ architecture arch_name of processador is
 						saida_MUX => MUX_ProxPC_Out
 					);
 				
-
+	-- mux do valor imediato e memória de dados (RAM)
 	MUX_Im: entity work.muxGenerico2x1
 				  port map (
 						entradaA_MUX => dataIn,
@@ -113,6 +103,7 @@ architecture arch_name of processador is
 						saida_MUX => MUX_Imed_Out
 				  );
 
+	-- banco de registradores
 	Registradores : entity work.bancoRegistradoresArqRegReg
 							 generic map (
 								 larguraDados => 8,
@@ -129,6 +120,7 @@ architecture arch_name of processador is
 								 saidaB => ULAentradaB
 						);
 					  
+	-- ULA que realiza as operações lógicas e aritméticas		  
 	ULA : entity work.ULA  
 				generic map(
 					larguraDados => 8
@@ -141,6 +133,7 @@ architecture arch_name of processador is
 					flagZero => flagZero
 				);		
 				
+	-- flip flop que salva o valor da flag zero			
 	flipflop : entity work.flipflop   
 				  port map (
 						data_in => flagZero,
@@ -150,6 +143,7 @@ architecture arch_name of processador is
 						rst => '0'
 				  );
 				 
+	-- mux do valor de dois registradores
 	MUX_ULA: entity work.muxGenerico2x1
             port map (
 					entradaA_MUX => MUX_Imed_Out ,
@@ -158,19 +152,19 @@ architecture arch_name of processador is
 					saida_MUX => escritaRC
 				);
 
+	-- valores de saída do processador
 	dataOut <= ULAentradaA;
 	adress <= imediatoValor;
 	habEscritaMEM <= palavraControle(0);
 	habLeituraMEM <= palavraControle(1);
+	habEscritaReg <= palavraControle(5);
 		
-		habEscritaReg <= palavraControle(5);
-		
-		pinTest <= PC_Out;
-		pinTestA <= ULAentradaA;
-		pinTestB <= ULAentradaB;
-		pinTestSaidaULA <= ULA_Out;
-		
-		pinTestflagZero <= flagZero;
-		pinOpcode <= opCode;
+--		pinTest <= PC_Out;
+--		pinTestA <= ULAentradaA;
+--		pinTestB <= ULAentradaB;
+--		pinTestSaidaULA <= ULA_Out;
+--		
+--		pinTestflagZero <= flagZero;
+--		pinOpcode <= opCode;
 --	
 end architecture;

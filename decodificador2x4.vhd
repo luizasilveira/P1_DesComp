@@ -23,8 +23,9 @@ ARCHITECTURE comportamento OF decodificador2x4 IS
     -- sinal do seletor
     SIGNAL numSeletor : unsigned(8 DOWNTO 0);
 
+	 -- instancia as flags que habilitam os periféricos, dados os seus endereços
     BEGIN
-        numSeletor(7 DOWNTO 0) <= unsigned(seletor);
+        numSeletor(7 DOWNTO 0) <= unsigned(seletor); --seletor
         
         habilita(0) <= '1' WHEN numSeletor <= 9 ELSE '0'; --Switch
         habilita(1) <= '1' WHEN numSeletor >= 10 AND numSeletor <= 13 ELSE '0'; --Botoes

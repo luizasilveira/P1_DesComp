@@ -62,6 +62,7 @@ ARCHITECTURE main OF unidadeControle IS
  -- S   L  habLeituraMEM    1        0        0        0       0       0        0        0		 0
  --     E  habEscritaMEM    0        0        0        0       0       0        1        0		 0
 	 
+	 
 	 -- habilita os pontos de controle para cada instrução
 	 BEGIN
 		 habFlipFlop   <= '1' when opcode = opcodeCMP else '0';

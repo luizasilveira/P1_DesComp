@@ -66,7 +66,6 @@ set_global_assignment -name VHDL_FILE interfaceBOTOES.vhd
 set_global_assignment -name VHDL_FILE conversorHex7Seg.vhd
 set_global_assignment -name VHDL_FILE divisorGenerico_e_Interface.vhd
 set_global_assignment -name VHDL_FILE interfaceHEX.vhd
-set_global_assignment -name VHDL_FILE main.vhd
 set_location_assignment PIN_M9 -to CLOCK_50
 set_location_assignment PIN_U21 -to HEX0[0]
 set_location_assignment PIN_V21 -to HEX0[1]
