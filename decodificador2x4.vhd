@@ -10,8 +10,10 @@ ENTITY decodificador2x4 IS
         seletor : IN std_logic_vector(7 DOWNTO 0);
 
         -- portas de saída
-      habilita : OUT std_logic_vector(7 DOWNTO 0);
-		habhex : OUT std_logic_vector(7 DOWNTO 0)
+      habilitaRAM : OUT std_logic_vector(7 DOWNTO 0);
+		habhex : OUT std_logic_vector(7 DOWNTO 0);
+		habSw :  OUT std_logic_vector(7 DOWNTO 0); 
+		habBT :  OUT std_logic_vector(3 DOWNTO 0)
 
     );
 
@@ -27,9 +29,22 @@ ARCHITECTURE comportamento OF decodificador2x4 IS
     BEGIN
         numSeletor(7 DOWNTO 0) <= unsigned(seletor); --seletor
         
-        habilita(0) <= '1' WHEN numSeletor <= 9 ELSE '0'; --Switch
-        habilita(1) <= '1' WHEN numSeletor >= 10 AND numSeletor <= 13 ELSE '0'; --Botoes
-        habilita(2) <= '1' WHEN numSeletor >= 128 AND numSeletor <= 191 ELSE '0'; --MemRam
+--        habilita(0) <= '1' WHEN numSeletor <= 9 ELSE '0'; --Switch
+		  habSw(0) <= '1' WHEN numSeletor = 16 ELSE '0'; --SW0
+        habSw(1) <= '1' WHEN numSeletor = 17 ELSE '0'; --SW1
+        habSw(2) <= '1' WHEN numSeletor = 18 ELSE '0'; --SW2
+        habSw(3) <= '1' WHEN numSeletor = 19 ELSE '0'; --SW3
+        habSw(4) <= '1' WHEN numSeletor = 20 ELSE '0'; --SW4
+        habSw(5) <= '1' WHEN numSeletor = 21 ELSE '0'; --SW5
+        habSw(6) <= '1' WHEN numSeletor = 22  ELSE '0'; --SW6
+		  habSw(7) <= '1' WHEN numSeletor = 23  ELSE '0'; --SW7
+		  
+        habBT(0) <= '1' WHEN numSeletor = 24 ELSE '0'; --Botoes
+		  habBT(1) <= '1' WHEN numSeletor = 25 ELSE '0'; --Botoes
+		  habBT(2) <= '1' WHEN numSeletor = 26 ELSE '0'; --Botoes
+		  habBT(3) <= '1' WHEN numSeletor = 27 ELSE '0'; --Botoes
+		  
+        habilitaRAM(0) <= '1' WHEN numSeletor >= 128 AND numSeletor <= 191 ELSE '0'; --MemRam
         
         habhex(0) <= '1' WHEN numSeletor = 64 ELSE '0'; --HEX1
         habhex(1) <= '1' WHEN numSeletor = 65 ELSE '0'; --HEX2

@@ -1,5 +1,5 @@
 Assembler report for Clock
-Mon Oct 19 17:20:33 2020
+Mon Oct 19 23:19:28 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: Clock.sof
+  5. Assembler Device Options: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/output_files/Clock.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Oct 19 17:20:33 2020 ;
+; Assembler Status      ; Successful - Mon Oct 19 23:19:28 2020 ;
 ; Revision Name         ; Clock                                 ;
 ; Top-level Entity Name ; Clock                                 ;
 ; Family                ; Cyclone V                             ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+----------------------------------------------------------------------------------+
-; Assembler Generated Files                                                        ;
-+----------------------------------------------------------------------------------+
-; File Name                                                                        ;
-+----------------------------------------------------------------------------------+
-; /home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/output_files/Clock.sof ;
-+----------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                                     ;
++-----------------------------------------------------------------------------------------------+
+; File Name                                                                                     ;
++-----------------------------------------------------------------------------------------------+
+; C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/output_files/Clock.sof ;
++-----------------------------------------------------------------------------------------------+
 
 
-+-------------------------------------+
-; Assembler Device Options: Clock.sof ;
-+----------------+--------------------+
-; Option         ; Setting            ;
-+----------------+--------------------+
-; JTAG usercode  ; 0x0054A9EE         ;
-; Checksum       ; 0x0054A9EE         ;
-+----------------+--------------------+
++-------------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/output_files/Clock.sof ;
++----------------+--------------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                                ;
++----------------+--------------------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x004E8EF4                                                                                             ;
+; Checksum       ; 0x004E8EF4                                                                                             ;
++----------------+--------------------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Mon Oct 19 17:20:28 2020
+    Info: Processing started: Mon Oct 19 23:19:19 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Clock -c Clock
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 509 megabytes
-    Info: Processing ended: Mon Oct 19 17:20:33 2020
-    Info: Elapsed time: 00:00:05
+    Info: Peak virtual memory: 4830 megabytes
+    Info: Processing ended: Mon Oct 19 23:19:29 2020
+    Info: Elapsed time: 00:00:10
     Info: Total CPU time (on all processors): 00:00:05
 
 

@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(5CEBA4F23) Path("/home/gabrielacaruso/Documents/6sem/p1_relogio/P1_DesComp/output_files/") File("Clock.sof") MfrSpec(OpMask(1));
+		Device PartName(5CEBA4F23) Path("C:/Users/Luiza Silveira/Desktop/INSPER/6semestre/DesingComp/P1_DesComp/output_files/") File("Clock.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

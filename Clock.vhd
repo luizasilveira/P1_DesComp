@@ -13,8 +13,10 @@ entity Clock is
         SW           : IN std_logic_vector(9 DOWNTO 0);
         KEY          : IN std_logic_vector(3 DOWNTO 0);
         FPGA_RESET_N : IN std_logic;
+		  LEDR 		   : out std_logic_vector (9 downto 0);
         HEX0, HEX1, HEX2, HEX3, HEX4, HEX5 : OUT std_logic_vector(6 DOWNTO 0);
-		  habilita_t : OUT std_logic_vector(7 downto 0);
+		  habilitaSW_t : OUT std_logic_vector(7 downto 0);
+		  habilitaBT_t : OUT std_logic_vector(3 downto 0);
 		  habilitahex_t : OUT std_logic_vector(7 downto 0);
 		  BarramentoSaida_t    : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
 		  enderecoRAMROM_DEBUG    : OUT std_logic_vector(dataWidth - 1 DOWNTO 0);
@@ -38,15 +40,24 @@ architecture arch_name of Clock is
 			 
 	signal habEscritaMEM, habLeituraMEM   	: std_logic;
 	
-	signal habilita, habhex, ula_out             				: std_logic_vector(7 DOWNTO 0);	
+	signal habilitaRAM, habhex, habSw, ula_out             				: std_logic_vector(7 DOWNTO 0);	
 	
-	signal instOpCode              				: std_logic_vector(3 DOWNTO 0);	
+	signal instOpCode, habBT              				: std_logic_vector(3 DOWNTO 0);	
 	
 	signal s_HEX0, s_HEX1, s_HEX2, s_HEX3, s_HEX4, s_HEX5 : std_logic_vector(6 DOWNTO 0);
 	
-	ALIAS habChaves  : std_logic IS habilita(0);
-	ALIAS habBotoes  : std_logic IS habilita(1);
-	ALIAS habRAM     : std_logic IS habilita(2);
+--	ALIAS habChaves  : std_logic IS habSw(0);
+--	ALIAS habBotoes  : std_logic IS habilita(1);
+	ALIAS habRAM     : std_logic IS habilitaRAM(0);
+	
+--	ALIAS habSW0      : std_logic IS habSw(0);
+--	ALIAS habSW1      : std_logic IS habSw(1);
+--	ALIAS habSW2 		: std_logic IS habSw(2);
+--	ALIAS habSW3      : std_logic IS habSw(3);
+--	ALIAS habSW4      : std_logic IS habSw(4);
+--	ALIAS habSW5      : std_logic IS habSw(5);
+--	ALIAS habSW6      : std_logic IS habSw(6);
+--	ALIAS habSW7      : std_logic IS habSw(7);
 	
 	ALIAS habHex0      : std_logic IS habhex(0);
 	ALIAS habHex1      : std_logic IS habhex(1);
@@ -57,7 +68,14 @@ architecture arch_name of Clock is
 	ALIAS habBaseTempo : std_logic IS habhex(6);
 	ALIAS LimpaBaseTempo  : std_logic IS habhex(7);
 	
-
+--		clk : in std_logic;
+--        seletor : IN std_logic_vector(7 DOWNTO 0);
+--
+--        -- portas de saída
+--      habilitaRAM : OUT std_logic_vector(7 DOWNTO 0);
+--		habhex : OUT std_logic_vector(7 DOWNTO 0);
+--		habSw :  OUT std_logic_vector(7 DOWNTO 0); 
+--		habBT :  OUT std_logic_vector(3 DOWNTO 0); 
 	
 	--E0 (0 até 9) : Chaves (Switches)
 --E1 (10 até 13) : Botões
@@ -98,13 +116,23 @@ architecture arch_name of Clock is
 				pinOpcode => instOpCode
 				);
 --			
-
+--		clk : in std_logic;
+--        seletor : IN std_logic_vector(7 DOWNTO 0);
+--
+--        -- portas de saída
+--    habilitaRAM : OUT std_logic_vector(7 DOWNTO 0);
+--		habhex : OUT std_logic_vector(7 DOWNTO 0);
+--		habSw :  OUT std_logic_vector(7 DOWNTO 0); 
+--		habBT :  OUT std_logic_vector(3 DOWNTO 0); 
+	
 	Decoder: entity work.decodificador2x4
 			port map (
 			clk => CLOCK_50,
 			seletor => adress,
-			habilita => habilita,
-			habhex => habhex
+			habilitaRAM => habilitaRAM,
+			habhex => habhex,
+			habSw => habSw,
+			habBT => habBT
 --			LOAD => instOpCode := "0001"
 			);
 									
@@ -127,8 +155,7 @@ architecture arch_name of Clock is
         )
         PORT MAP(
             Switch  => SW,
-            endereco => adress,
-            habilita => habChaves,
+            habilita => habSw,
             saida    => BarramentoEntrada
         );
 
@@ -139,8 +166,7 @@ architecture arch_name of Clock is
         )
         PORT MAP(
             btn  => KEY,
-            endereco => adress,
-            habilita => habBotoes,
+            habilita => habBT,
             saida    => BarramentoEntrada
         );	
 
@@ -198,14 +224,23 @@ architecture arch_name of Clock is
 				seletorClk => '1',
             leituraUmSegundo => BarramentoEntrada
         );	
-	
+		  
+	 LEDR(1) <= SW(0);
+--	 LEDR(1) <= SW(1);
+--	 LEDR(1) <= SW(2);
+--	 LEDR(1) <= SW(3);
+--	 LEDR(1) <= SW(4);
+--	 LEDR(1) <= SW(5);
+--	 LEDR(1) <= SW(6);
+	  
 	 HEX0 <= s_HEX0;
 	 HEX1 <= s_HEX1;
 	 HEX2 <= s_HEX2;
 	 HEX3 <= s_HEX3;
 	 HEX4 <= s_HEX4;
 	 HEX5 <= s_HEX5;
-	 habilita_t <= habilita;
+	 habilitaSW_t <= habSw;
+	 habilitaBT_t <= habBT;
 	 habilitahex_t <= habhex;
 	 BarramentoSaida_t  <= BarramentoSaida;
 	 enderecoRAMROM_DEBUG <= adress;
