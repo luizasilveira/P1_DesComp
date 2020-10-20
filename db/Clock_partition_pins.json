@@ -4,7 +4,7 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "LEDR[1]",
+					"name" : "LEDR[0]",
 					"strict" : false
 				},
 				{
@@ -180,11 +180,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "habilitaSW_t[1]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaSW_t[2]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaSW_t[3]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaSW_t[4]",
+					"strict" : false
+				},
+				{
 					"name" : "habilitaSW_t[5]",
 					"strict" : false
 				},
 				{
+					"name" : "habilitaSW_t[6]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaSW_t[7]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaBT_t[0]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaBT_t[1]",
+					"strict" : false
+				},
+				{
 					"name" : "habilitaBT_t[2]",
+					"strict" : false
+				},
+				{
+					"name" : "habilitaBT_t[3]",
 					"strict" : false
 				},
 				{
@@ -376,7 +412,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SW[7]",
+					"name" : "SW[4]",
 					"strict" : false
 				},
 				{
@@ -384,7 +420,39 @@
 					"strict" : false
 				},
 				{
+					"name" : "SW[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SW[3]",
+					"strict" : false
+				},
+				{
 					"name" : "KEY[2]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[3]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[0]",
+					"strict" : false
+				},
+				{
+					"name" : "KEY[1]",
 					"strict" : false
 				}
 			]

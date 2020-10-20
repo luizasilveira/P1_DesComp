@@ -21,7 +21,7 @@ ARCHITECTURE interface OF divisorGenerico_e_Interface IS
     SIGNAL passouUmSegundo : std_logic := '0';
     SIGNAL count : INTEGER RANGE 0 TO 100000000 := 0;
     signal clockNormal : NATURAL := 50000000;
-    signal clockAcelerado : NATURAL := 100000; --250000; --1000000;
+    signal clockAcelerado : NATURAL := 250000; --100000; --1000000;
     SIGNAL clock_utilizado : NATURAL;
    
 BEGIN

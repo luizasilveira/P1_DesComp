@@ -225,7 +225,7 @@ architecture arch_name of Clock is
             leituraUmSegundo => BarramentoEntrada
         );	
 		  
-	 LEDR(1) <= SW(0);
+	 LEDR(0) <= SW(0);
 --	 LEDR(1) <= SW(1);
 --	 LEDR(1) <= SW(2);
 --	 LEDR(1) <= SW(3);
