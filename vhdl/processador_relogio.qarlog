@@ -1,0 +1,35 @@
+Quartus Prime Archive log --	C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/processador_relogio.qarlog
+
+Archive:	C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/processador_relogio.qar
+Date:		Tue Oct 20 23:49:08 2020
+Quartus Prime		20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+	=========== Files Selected: ===========
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/Clock.qpf
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/Clock.qsf
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/Clock.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/MuxStd_logic.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/Processador.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/ULA.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/UnidadeControle.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/Waveform.vwf
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/bancoRegistradoresArqRegReg.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/conversorHex7Seg.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/decodificador2x4.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/divisorGenerico.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/divisorGenerico_e_Interface.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/edgeDetector.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/flipflop.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/interfaceBOTOES.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/interfaceCHAVES.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/interfaceHEX.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/memoriaRAM.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/memoriaROM.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/muxGenerico2x1.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/registradorGenerico.vhd
+C:/Users/biaku/Documents/INSPER/6semestre/Design de Computadores/P1_DesComp/vhdl/somaConstante.vhd
+c:/intelfpga_lite/20.1/quartus/bin64/assignment_defaults.qdf
+	======= Total: 24 files to archive =======
+
+	================ Status: ===============
+All files archived successfully.
