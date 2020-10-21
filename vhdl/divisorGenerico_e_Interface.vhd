@@ -1,48 +1,66 @@
--- referências: modelo VHDL baseado no https://github.com/HenryRocha/computer-design-clock 
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
 
 ENTITY divisorGenerico_e_Interface IS
     GENERIC (
-        dataWidth : NATURAL := 8
+        DATA_WIDTH : NATURAL := 8
     );
     PORT (
-        clk              : IN std_logic;
+        -- Input ports
+		  clk              : IN std_logic;
         habilitaLeitura  : IN std_logic;
         limpaLeitura     : IN std_logic;
-		  sel        		 : IN std_logic;
-        leituraUmSegundo : OUT std_logic_vector(dataWidth - 1 DOWNTO 0)
+		  sel              : IN std_logic;
+        leituraUmSegundo : OUT std_logic_vector(DATA_WIDTH - 1 DOWNTO 0)
     );
 END ENTITY;
 
 ARCHITECTURE interface OF divisorGenerico_e_Interface IS
-    SIGNAL passouUmSegundo : std_logic := '0';
-    SIGNAL count : INTEGER RANGE 0 TO 100000000 := 0;
-    signal clockNormal : NATURAL := 50000000;
-    signal clockAcelerado : NATURAL := 250000; --100000; --1000000;
-    SIGNAL clock_utilizado : NATURAL;
-   
-BEGIN
-    clock_utilizado <= clockAcelerado WHEN sel = '1' ELSE clockNormal;
-    PROCESS (clk)
-    BEGIN
-        IF rising_edge(clk) THEN
-            IF (limpaLeitura = '1') THEN
-                count        <= 0;
-                passouUmSegundo <= '0';
-            ELSIF count >= clock_utilizado THEN
-                passouUmSegundo <= '1';
-            ELSE
-                count        <= count + 1;
-                passouUmSegundo <= '0';
-            END IF;
-        END IF;
-    END PROCESS;
-	 
+    -- Sinal que indica se passou um segundo.	 
+	 signal clockNormal      : std_logic; 
+    signal clockAcelerado   : std_logic;
+    SIGNAL clock_utilizado  : std_logic;
+    SIGNAL sinalUmSegundo   : std_logic;
 
-    -- Mudamos apenas o primeiro bit da sa�da, retirando a necessidade de um
-    -- extensor de sinal no fluxo de dados.
-    leituraUmSegundo <= ("0000000" & passouUmSegundo) WHEN habilitaLeitura = '1' ELSE
-        (OTHERS => 'Z');END ARCHITECTURE interface;
+BEGIN
+
+		 baseTempoNormal : ENTITY work.divisorGenerico
+		  GENERIC MAP(
+				divisor => 25000000
+		  ) 
+		  PORT MAP(
+				clk       => clk,
+				saida_clk => clockNormal 
+		  );
+		  
+		  baseTempoRapido : ENTITY work.divisorGenerico
+		  GENERIC MAP(
+				divisor => 125000
+		  ) 
+		  PORT MAP(
+				clk       => clk,
+				saida_clk => clockAcelerado 
+		  );
+		  
+		  mux : entity work.muxStd_logic
+		  PORT MAP(
+				entradaA_MUX => clockNormal,
+				entradaB_MUX => clockAcelerado,
+				seletor_MUX => sel,
+				saida_MUX => clock_utilizado 
+		  );
+		  
+		  registraUmSegundo : ENTITY work.flipflop
+        PORT MAP(
+            data_in    => '1',
+            ENABLE => '1',
+            clk    => clock_utilizado,
+            rst    => limpaLeitura,
+			   data_out   => sinalUmSegundo
+        );
+		
+    leituraUmSegundo <= "0000000" & sinalUmSegundo WHEN habilitaLeitura = '1' ELSE
+        "ZZZZZZZZ";
+END ARCHITECTURE interface;

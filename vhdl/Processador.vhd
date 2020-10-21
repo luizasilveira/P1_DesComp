@@ -14,14 +14,7 @@ entity processador is
 		adress: out std_logic_vector(7 DOWNTO 0);
 		habEscritaReg: out std_logic;
 		habEscritaMEM: out std_logic;
-		habLeituraMEM: out std_logic;
---		
---		pinTest : out std_logic_vector(7 downto 0);
---		pinTestA : out std_logic_vector(7 downto 0);
---		pinTestB : out std_logic_vector(7 downto 0);
-		pinTestSaidaULA : out std_logic_vector(7 downto 0);
---		pinTestflagZero : out std_logic;
-		pinOpcode : out std_logic_vector(3 downto 0)
+		habLeituraMEM: out std_logic
 	);
  
 end entity;
@@ -89,7 +82,6 @@ architecture arch_name of processador is
 					port map (
 						entradaA_MUX => Inc_Out,
 						entradaB_MUX => imediatoValor, 
---						seletor_MUX => sel_mux,
 						seletor_MUX => palavraControle(9) OR (palavraControle(8) AND flipflop_Out),
 						saida_MUX => MUX_ProxPC_Out
 					);
@@ -158,13 +150,5 @@ architecture arch_name of processador is
 	habEscritaMEM <= palavraControle(0);
 	habLeituraMEM <= palavraControle(1);
 	habEscritaReg <= palavraControle(5);
---		
---		pinTest <= PC_Out;
---		pinTestA <= ULAentradaA;
---		pinTestB <= ULAentradaB;
-		pinTestSaidaULA <= ULA_Out;
-		
---		pinTestflagZero <= flagZero;
-		pinOpcode <= opCode;
---	
+	
 end architecture;

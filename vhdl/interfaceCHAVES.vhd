@@ -24,18 +24,7 @@ ARCHITECTURE comportamento OF interfaceCHAVES IS
 	
 	BEGIN
 		
-		  saida <=  "0000000" & Switch(0)  WHEN habilita(0) = '1' ELSE
-						"0000000" & Switch(1)  WHEN habilita(1) = '1' ELSE
-						"0000000" & Switch(2)  WHEN habilita(2) = '1' ELSE
-						"0000000" & Switch(3)  WHEN habilita(3) = '1' ELSE
-						"0000000" & Switch(4)  WHEN habilita(4) = '1' ELSE
-						"0000000" & Switch(5)  WHEN habilita(5) = '1' ELSE
-						"0000000" & Switch(6)  WHEN habilita(6) = '1' ELSE
-						"0000000" & Switch(7)  WHEN habilita(7) = '1' ELSE
+		  saida <=  "0000000" & Switch WHEN habilita(0) = '1' ELSE
 						 (OTHERS => 'Z');
 
-	-- habilita as chaves se a flag for 1
---   saida <= sinal WHEN (habilita = '1') 
---						ELSE (OTHERS => 'Z');
---						
 END ARCHITECTURE;
