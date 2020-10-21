@@ -61,6 +61,5 @@ ARCHITECTURE comportamento OF decodificador2x4 IS
 		  
         habilitaRAM(0) <= '1' WHEN numSeletor >= 128 AND numSeletor <= 191 ELSE '0'; --MemRam
         
-
 	 
 END ARCHITECTURE;

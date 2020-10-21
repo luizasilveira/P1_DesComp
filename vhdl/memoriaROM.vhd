@@ -51,11 +51,11 @@ architecture assincrona of memoriaROM is
 		-- HEX_US  		: enderco de memoria para o hex da unidade de segundo		- 01000000
 		-- HEX_DS  		: enderco de memoria para o hex da dezena de segundo		- 01000001
 		-- HEX_UM  		: enderco de memoria para o hex da unidade de minuto		- 01000010
-		-- HEX_DM  		: enderco de memoria para o hex da dezena de minuto		    - 01000011
+		-- HEX_DM  		: enderco de memoria para o hex da dezena de minuto		- 01000011
 		-- HEX_UH  		: enderco de memoria para o hex da unidade de hora			- 01000100
 		-- HEX_DH  		: enderco de memoria para o hex da dezena de hora			- 01000101
 		-- TEMP_READ    : enderco de memoria para ler o tempo no hex 				- 00001110
-		-- TEMP_CLEAR   : enderco de memoria para zerar o tempo no hex 				- 00001111	  	
+		-- TEMP_CLEAR   : enderco de memoria para zerar o tempo no hex 			- 00001111	  	
 
 		-- Inicializa os endereços:
 		--        OpCode     Ra       Rb       Rc      Imediato

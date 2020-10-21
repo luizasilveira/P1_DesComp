@@ -21,9 +21,8 @@ END ENTITY;
 
 ARCHITECTURE comportamento OF interfaceCHAVES IS
 
-	
+	-- habilita as chaves se a flag for 1
 	BEGIN
-		
 		  saida <=  "0000000" & Switch WHEN habilita(0) = '1' ELSE
 						 (OTHERS => 'Z');
 
