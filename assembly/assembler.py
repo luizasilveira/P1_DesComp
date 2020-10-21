@@ -21,17 +21,12 @@ regs = {
     "R_DH": "0110",
     "R_ADD1": "0111",
     "R_CMP": "1000",
-    "R_10": "1001",
-    "R_60": "1010",
-    "R_20": "1011",
-    "R_24": "1100",
-    "R_BT1": "1101",
-    "R_BT2": "1110",
-    "R_BT3": "1111",
+    "R_IM": "1001",
+    "R_BT": "1010",
     "R_0": "0000",
 }
 
-file_name = str("teste.asm")
+file_name = str("assembly_final.asm")
 output_file = str("out.txt")
 
 line_number = 0
