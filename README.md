@@ -3,7 +3,7 @@ Beatriz Mie Kotsubo Kuwabara, Gabriela Iannini Caruso e Luiza Rodrigues Silveira
 
 ### Diagrama de blocos:
 
-aqui
+![Diagrama de blocos](diagrama_blocos.png)
 
 ### Manual de utilização dos botões e switches da placa DE0-CV:
 Switches
